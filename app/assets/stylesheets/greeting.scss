@@ -1,0 +1,74 @@
+.splash-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+
+.demo-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.splash-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0 30px;
+    line-height: 30px;
+}
+
+.splash-heading h2 {
+    margin-bottom: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.splash-heading p {
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.demo-section {
+    max-width: 33%;
+    box-sizing: border-box;
+    margin: 0 10px;
+    padding: 25px 25px 0 25px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.demo-section label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.splash-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.splash-bottom {
+    margin: 50px 0 100px 0 ;
+}
+
+.splash-bottom a {
+    color: rgb(0, 173, 226);
+}
+
+.splash-bottom p {
+    text-align: center;
+    line-height: 30px;
+}
+
+.splash-bottom a:hover {
+    color: rgb(136, 207, 255);
+}
