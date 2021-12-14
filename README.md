@@ -1,24 +1,7 @@
-# README
+# Annotatify
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Annotatify is a single-page application imspired by genius.com that allows users to annotate texts.
 
-Things you may want to cover:
+## Technologies
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Annotatify was created with a Ruby on Rails backend, PostgreSQL database, and React.js with Redux for the front end.
