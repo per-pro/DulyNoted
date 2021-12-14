@@ -840,7 +840,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "logout", function() { return logout; });
 var signup = function signup(user) {
   return $.ajax({
-    url: '/api/user',
+    url: '/api/users',
     method: 'POST',
     data: {
       user: user
