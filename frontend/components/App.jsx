@@ -17,7 +17,7 @@ const App = () => (
   <div>
     <header>
         {/* <Link to="/" className="header-link"> */}
-            <h1>Annotatify</h1>   
+            <h1>DulyNoted</h1>   
         {/* </Link> */}
         <GreetingContainer />
     </header>
