@@ -1,6 +1,6 @@
 # DulyNoted
 
-DulyNoted is a single-page application imspired by genius.com that allows users to annotate texts.
+DulyNoted is a single-page application imspired by genius.com that allows users to annotate texts. 
 
 ## Technologies
 
