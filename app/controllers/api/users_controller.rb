@@ -10,6 +10,8 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  # this is a test
+
   private
 
   def user_params
