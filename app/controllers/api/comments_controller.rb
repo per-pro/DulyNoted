@@ -4,6 +4,17 @@ class Api::CommentsController < ApplicationController
         @comments = Comment.all 
     end
 
-    def create
+    def new 
         @comment = Comment.new
+    end
+
+    def create
+        @comment = Comment.new(title: "...", author: "...", content: "...")
+
+        if @comment.save
+            redirect_to @comment
+        else 
+            render :new, status: :error
+        end 
+    end 
 end
