@@ -1,4 +1,4 @@
-import CommentIndex from "./comment_index.jsx";
+import CommentIndex from "../comment_index.jsx";
 
 //...
 
