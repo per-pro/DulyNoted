@@ -13,6 +13,6 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
     removeErrors: () => dispatch(removeErrors())
 });
 
-//this is a test
+//this is still a test
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionForm);
