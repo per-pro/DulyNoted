@@ -18,3 +18,5 @@ export default connect(
   mapStateToProps,
   mapDispatchToProps
 )(CommentIndex);
+
+// this is a test
