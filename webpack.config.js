@@ -26,3 +26,6 @@ module.exports = {
     extensions: [".js", ".jsx", "*"]
   }
 };
+
+
+//I think something might be wrong with this file since I'm getting a segfault
