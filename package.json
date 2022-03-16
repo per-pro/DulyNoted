@@ -25,12 +25,12 @@
     "test": "test"
   },
   "engines": {
-    "node": "10.19.0",
-    "npm": "6.14.4"
+    "node": "10.13.0",
+    "npm": "7.11.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --watch --mode=development",
+    "start": "webpack --watch --mode=development",
     "postinstall": "webpack"
   },
   "repository": {
