@@ -20,6 +20,4 @@ const mapDTP = (dispatch, ownProps) => ({
 
 });
 
-// last test
-
 export default connect(mapSTP, mapDTP)(TrackShow);
