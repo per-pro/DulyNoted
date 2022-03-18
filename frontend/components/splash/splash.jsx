@@ -7,7 +7,7 @@ const Splash = () => {
 
         <div className="splash-container">
             <div className="splash-greeting">
-                <h2>Welcome to Duly Noted :)</h2>
+                <h2>Welcome to Duly Noted</h2>
                 <p>Duly Noted lets you annotate your favorite songs and texts</p> 
             </div>
                 
