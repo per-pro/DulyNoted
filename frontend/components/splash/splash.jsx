@@ -12,6 +12,7 @@ const Splash = () => {
 
             <div className="splash-greeting">
                 <h2>Welcome to Duly Noted</h2>
+                <br />
                 <p>Duly Noted lets you annotate your favorite songs and texts</p> 
             </div>
         </div>
@@ -19,3 +20,5 @@ const Splash = () => {
 }
 
 export default Splash;
+
+// refactor this later so that title and sign in are on the same line
