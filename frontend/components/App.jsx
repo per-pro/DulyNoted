@@ -16,7 +16,7 @@ import Splash from './splash/splash'
 const App = () => (
   <div>
     <header>
-            <h1>DulyNoted</h1>   
+            <h1 id="header">D u l y  N o t e d</h1>   
     </header>
     <main>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
@@ -28,3 +28,5 @@ const App = () => (
 );
 
 export default App;
+
+//Note - on genius, log in is a modal
