@@ -17,7 +17,6 @@ const App = () => (
   <div>
     <header>
             <h1>DulyNoted</h1>   
-        <GreetingContainer />
     </header>
     <main>
       <Switch>
