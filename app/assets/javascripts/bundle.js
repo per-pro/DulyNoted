@@ -193,6 +193,37 @@ var logout = function logout() {
 
 /***/ }),
 
+/***/ "./frontend/actions/text_actions.js":
+/*!******************************************!*\
+  !*** ./frontend/actions/text_actions.js ***!
+  \******************************************/
+/*! exports provided: RECEIVE_TEXTS, FETCH_TEXTS, receiveTexts, fetchTexts */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TEXTS", function() { return RECEIVE_TEXTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_TEXTS", function() { return FETCH_TEXTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveTexts", function() { return receiveTexts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTexts", function() { return fetchTexts; });
+/* harmony import */ var _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/session_api_util */ "./frontend/util/session_api_util.js");
+
+var RECEIVE_TEXTS = 'RECEIVE_TEXTS';
+var FETCH_TEXTS = 'FETCH_TEXTS';
+var receiveTexts = function receiveTexts(texts) {
+  return {
+    type: RECEIVE_TEXTS,
+    texts: texts
+  };
+};
+var fetchTexts = function fetchTexts() {
+  return {
+    type: FETCH_TEXTS
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/components/App.jsx":
 /*!*************************************!*\
   !*** ./frontend/components/App.jsx ***!
@@ -209,7 +240,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./session_form/login_form_container */ "./frontend/components/session_form/login_form_container.jsx");
 /* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
 /* harmony import */ var _splash_splash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./splash/splash */ "./frontend/components/splash/splash.jsx");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './text_form/text_index_container'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _text_form_text_index_container__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./text_form/text_index_container */ "./frontend/components/text_form/text_index_container.jsx");
 
 
 
@@ -236,7 +267,7 @@ var App = function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__["ProtectedRoute"], {
     exact: true,
     path: "/",
-    component: !(function webpackMissingModule() { var e = new Error("Cannot find module './text_form/text_index_container'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
+    component: _text_form_text_index_container__WEBPACK_IMPORTED_MODULE_7__["default"]
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
@@ -510,6 +541,56 @@ var Splash = function Splash() {
 
 /***/ }),
 
+/***/ "./frontend/components/text_form/text_index_container.jsx":
+/*!****************************************************************!*\
+  !*** ./frontend/components/text_form/text_index_container.jsx ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module './text_index.jsx.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+
+
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  return {
+    text: state.entities.tracks[ownProps.match.params.trackId],
+    artists: state.entities.artists,
+    comments: Object.values(state.entities.comments).sort(function (a, b) {
+      if (a.startIndex < b.startIndex) {
+        return -1;
+      } else {
+        return 1;
+      }
+    })
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
+  return {
+    requestText: function (_requestText) {
+      function requestText(_x) {
+        return _requestText.apply(this, arguments);
+      }
+
+      requestText.toString = function () {
+        return _requestText.toString();
+      };
+
+      return requestText;
+    }(function (textId) {
+      return dispatch(requestText(textId));
+    })
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(!(function webpackMissingModule() { var e = new Error("Cannot find module './text_index.jsx.js'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())));
+
+/***/ }),
+
 /***/ "./frontend/dulynoted.jsx":
 /*!********************************!*\
   !*** ./frontend/dulynoted.jsx ***!
@@ -600,7 +681,7 @@ var commentsReducer = function commentsReducer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './texts_reducer'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _texts_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./texts_reducer */ "./frontend/reducers/texts_reducer.js");
 /* harmony import */ var _comments_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./comments_reducer */ "./frontend/reducers/comments_reducer.js");
 
 
@@ -608,7 +689,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  texts: !(function webpackMissingModule() { var e = new Error("Cannot find module './texts_reducer'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
+  texts: _texts_reducer__WEBPACK_IMPORTED_MODULE_4__["default"],
   comments: _comments_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
@@ -732,6 +813,36 @@ var sessionReducer = function sessionReducer() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (sessionReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/texts_reducer.js":
+/*!********************************************!*\
+  !*** ./frontend/reducers/texts_reducer.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/text_actions */ "./frontend/actions/text_actions.js");
+
+
+var textsReducer = function textsReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TEXTS"]:
+      return action.texts;
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (textsReducer);
 
 /***/ }),
 

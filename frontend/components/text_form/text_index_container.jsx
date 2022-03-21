@@ -1,4 +1,4 @@
-import TextIndex from "./text_index.jsx";
+import TextIndex from "./text_index.jsx.js";
 import {connect} from "react-redux";
 
 const mapStateToProps = (state, ownProps) => ({
