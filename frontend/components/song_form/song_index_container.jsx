@@ -1,8 +1,8 @@
-import SongIndex from "./song_index.jsx";
+import TextIndex from "./text_index.jsx";
 import {connect} from "react-redux";
 
 const mapStateToProps = (state, ownProps) => ({
-  song: state.entities.tracks[ownProps.match.params.trackId],
+  text: state.entities.tracks[ownProps.match.params.trackId],
   artists: state.entities.artists,
   comments: Object.values(state.entities.comments).sort((a,b) => {
       if (a.startIndex < b.startIndex) {
@@ -15,11 +15,11 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  requestSong: (songId) => dispatch(requestSong(songId)),
+  requestText: (textId) => dispatch(requestText(textId)),
 
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SongIndex);
+)(TextIndex);

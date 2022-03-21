@@ -1,7 +1,7 @@
-export const fetchSongs = () => {
+export const fetchTexts = () => {
     return $.ajax({
       method: GET,
-      url: '/api/songs',
+      url: '/api/texts',
       error: (err) => console.log(err)
     })
   }

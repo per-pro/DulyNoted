@@ -13,7 +13,7 @@ const Splash = () => {
             <div className="splash-greeting">
                 <h2>Welcome to Duly Noted</h2>
                 <br />
-                <p>Duly Noted lets you annotate your favorite songs and texts</p> 
+                <p>Duly Noted lets you annotate your favorite texts and tracks</p> 
             </div>
         </div>
     )

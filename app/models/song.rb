@@ -1,4 +1,4 @@
-class Song < ApplicationRecord
+class Text < ApplicationRecord
     validates :title, :source, :author, :content, presence: true
     
     

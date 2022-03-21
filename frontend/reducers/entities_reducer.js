@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 
 import userReducer from './users_reducer';
-import songsReducer from './songs_reducer';
+import textsReducer from './texts_reducer';
 import commentsReducer from './comments_reducer'
 
 const entitiesReducer = combineReducers({
   users: userReducer,
-  songs: songsReducer,
+  texts: textsReducer,
   comments: commentsReducer
 });
 

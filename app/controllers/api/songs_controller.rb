@@ -1,18 +1,18 @@
-class Api::SongsController < ApplicationController
+class Api::TextsController < ApplicationController
 
     def index
-        @songs = Song.all 
+        @texts = Text.all 
     end
 
     def new 
-        @song = Song.new
+        @text = Text.new
     end
 
     def create
-        @song = Song.new(title: "...", author: "...", content: "...")
+        @text = Text.new(title: "...", author: "...", content: "...")
 
-        if @song.save
-            redirect_to @song
+        if @text.save
+            redirect_to @text
         else 
             render :new, status: :error
         end 

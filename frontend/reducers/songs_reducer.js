@@ -1,13 +1,13 @@
-import { RECEIVE_SONGS } from "../actions/song_actions";
+import { RECEIVE_TEXTS } from "../actions/text_actions";
 
-const songsReducer = (state = {}, action) => {
+const textsReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
-    case RECEIVE_SONGS:
-      return action.songs;
+    case RECEIVE_TEXTS:
+      return action.texts;
     default:
       return state;
   }
 };
 
-export default songsReducer;
+export default textsReducer;

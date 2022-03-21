@@ -1,2 +1,2 @@
-module Api::SongsHelper
+module Api::TextsHelper
 end

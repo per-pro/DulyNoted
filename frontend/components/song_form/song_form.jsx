@@ -1,36 +1,36 @@
 import React from "react";
 
-class TrackLyrics extends React.Component {
+class TextContent extends React.Component {
 
     render () {
         const { track, annotations, handleMouseUp, handleMouseDown, selectAnnotation } = this.props;
-        let annotatedLyrics = [];
+        let annotatedContent = [];
         let prevIndex = 0;
         let key = 0
 
         for (let i = 0; i < annotations.length; i++) {
             const annotation = annotations[i];
-            const lyric = track.lyrics.slice(annotation.startIndex, annotation.endIndex)
-            let before = track.lyrics.slice(prevIndex, annotation.startIndex);
+            const content = track.contents.slice(annotation.startIndex, annotation.endIndex)
+            let before = track.contents.slice(prevIndex, annotation.startIndex);
 
-            annotatedLyrics.push(
+            annotatedContent.push(
                 <span key={key++} data-indexoffset={prevIndex}>
                     {before}
                 </span>
             );
 
             if (annotation.id === 'new') {
-                annotatedLyrics.push(
-                    <span className="lyric-selected">{lyric}</span>
+                annotatedContent.push(
+                    <span className="content-selected">{content}</span>
                 )
             } else {
-                annotatedLyrics.push(
+                annotatedContent.push(
                     <a key={key++}
                         onClick={() => { selectAnnotation(annotation.id) }}
-                        className="lyric-annotated"
+                        className="content-annotated"
                         unselectable="on"
                     >
-                        {lyric}
+                        {content}
                     </a>
                 )
             }
@@ -38,28 +38,28 @@ class TrackLyrics extends React.Component {
             prevIndex = annotation.endIndex
 
             if (i === annotations.length - 1) {
-                annotatedLyrics.push(
+                annotatedContent.push(
                     <span key={key++} data-indexoffset={prevIndex}>
-                        {track.lyrics.slice(prevIndex, track.lyrics.length)}
+                        {track.contents.slice(prevIndex, track.contents.length)}
                     </span>
                 )
             }  
         }
 
-        if (annotatedLyrics.length) {
+        if (annotatedContents.length) {
             return (
-                <p className="lyrics-text" onMouseUp={handleMouseUp} onMouseDown={handleMouseDown}>
-                    {annotatedLyrics}
+                <p className="content-text" onMouseUp={handleMouseUp} onMouseDown={handleMouseDown}>
+                    {annotatedContent}
                 </p>
             )
         } else {
             return (
-                <p className="lyrics-text" onMouseUp={handleMouseUp} onMouseDown={handleMouseDown} data-indexoffset={0}>
-                    {this.props.track.lyrics}
+                <p className="content-text" onMouseUp={handleMouseUp} onMouseDown={handleMouseDown} data-indexoffset={0}>
+                    {this.props.track.content}
                 </p>
             )
         }
     }
 }
 
-export default TrackLyrics;
+export default TextContent;
