@@ -1,4 +1,5 @@
 import SongIndex from "./song_index.jsx";
+import {connect} from "react-redux";
 
 const mapStateToProps = (state, ownProps) => ({
   song: state.entities.tracks[ownProps.match.params.trackId],

@@ -9,8 +9,8 @@ import {
 import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import GreetingContainer from "./greeting/greeting_container";
 import Splash from './splash/splash'
+import SongIndexContainer from './song_form/song_index_container'
 
 
 const App = () => (
@@ -22,6 +22,7 @@ const App = () => (
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/" component={Splash}/>
+        <ProtectedRoute exact path="/" component={SongIndexContainer}/>
     </main>
     <br />
   </div>
