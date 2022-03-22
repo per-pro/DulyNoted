@@ -16,7 +16,7 @@ import TextIndexContainer from './text_form/text_index_container'
 const App = () => (
   <div>
     <header>
-            <h1 id="header">D U L Y  N O T E D</h1>   
+            <h1 id="header">D&nbsp; U&nbsp; L&nbsp; Y &nbsp;&nbsp;&nbsp; N&nbsp; O&nbsp; T&nbsp; E&nbsp; D</h1>   
     </header>
     <main>
       <Switch>
