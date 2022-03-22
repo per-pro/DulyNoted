@@ -26,19 +26,15 @@
 
 }
 
-header {
-    display: flex;
-}
-
 h1 {
     font-size: 24px !important;
-    text-align: center;
+    display: flex;
     background-color: yellow;
     color: white;
     text-shadow: 2px 2px 8px black;
 }
 
-.splash-top {
+#session {
     text-align: right;
     vertical-align: top;
 }
