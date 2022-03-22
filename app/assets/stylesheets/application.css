@@ -26,11 +26,15 @@
 
 }
 
+
 h1 {
     font-size: 24px !important;
     display: flex;
     background-color: yellow;
     color: white;
+}
+
+#title {
     text-shadow: 2px 2px 8px black;
 }
 
