@@ -20,12 +20,11 @@ const App = () => (
     </header>
     <main>
       <Switch>
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/" component={Splash}/>
         <ProtectedRoute exact path="/" component={TextIndexContainer}/>
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
       </Switch>
-        
     </main>
     <br />
   </div>

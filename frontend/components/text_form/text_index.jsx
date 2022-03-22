@@ -1,5 +1,6 @@
 import React from "react";
 
+
 class TextIndex extends React.Component {
 
     constructor (props) {
@@ -8,7 +9,7 @@ class TextIndex extends React.Component {
 
     render () {
         return (
-            <h1>Text Index</h1>
+            <button onClick={this.props.logout}>Log Out</button>
         )
     }
 
