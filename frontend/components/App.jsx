@@ -16,13 +16,16 @@ import TextIndexContainer from './text_form/text_index_container'
 const App = () => (
   <div>
     <header>
-            <h1 id="header">D u l y  N o t e d</h1>   
+            <h1 id="header">D U L Y  N O T E D</h1>   
     </header>
     <main>
+      <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
         <AuthRoute exact path="/" component={Splash}/>
         <ProtectedRoute exact path="/" component={TextIndexContainer}/>
+      </Switch>
+        
     </main>
     <br />
   </div>
