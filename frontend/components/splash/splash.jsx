@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 const Splash = () => {
 
     return (
-
         <div className="splash-container">
-            <div className="splash-top">
-                <Link to="/signup">SIGN UP</Link> <Link to="/login">LOG IN</Link> 
-            </div>
 
+            <header>
+                <h1 className="splash-top">
+                    <Link to="/signup">SIGN UP</Link> <Link to="/login">LOG IN</Link> 
+                </h1>
+            </header>
+                
             <div className="splash-greeting">
                 <h2>Welcome to Duly Noted</h2>
                 <br />
