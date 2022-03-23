@@ -9,7 +9,7 @@ const Splash = () => {
             <header>
 
                 <h1 id="title">D&nbsp; U&nbsp; L&nbsp; Y &nbsp;&nbsp;&nbsp; N&nbsp; O&nbsp; T&nbsp; E&nbsp; D</h1>   
-                <h1 id="session"><Link to="/signup">SIGN UP</Link> <Link to="/login">LOG IN</Link></h1>
+                <h1 id="session"><Link to="/signup">SIGN UP</Link> &nbsp; &nbsp; <Link to="/login">LOG IN</Link></h1>
             </header>
                 
             <div className="splash-greeting">
