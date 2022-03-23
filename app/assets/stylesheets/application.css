@@ -46,5 +46,5 @@ a {
 }
 
 #session {
-    flex-direction: right;
+    justify-content: right;
 }
