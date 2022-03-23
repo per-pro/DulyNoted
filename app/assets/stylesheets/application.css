@@ -26,10 +26,12 @@
 
 }
 
+header {
+    display: flex;
+}
 
 h1 {
     font-size: 24px !important;
-    display: flex;
     background-color: yellow;
     color: white;
 }
@@ -44,6 +46,5 @@ a {
 }
 
 #session {
-    text-align: right;
-    vertical-align: top;
+    flex-direction: right;
 }
