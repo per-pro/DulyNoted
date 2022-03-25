@@ -13,5 +13,5 @@ class Author < ApplicationRecord
 
     has_many :texts,
         class_name: 'Text',
-        foreign_key: :title_id
+        foreign_key: :author_id
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_24_224101) do
+ActiveRecord::Schema.define(version: 2022_03_25_233547) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,24 +27,25 @@ ActiveRecord::Schema.define(version: 2022_03_24_224101) do
     t.index ["name"], name: "index_authors_on_name"
   end
 
+  create_table "changes", force: :cascade do |t|
+  end
+
   create_table "comments", force: :cascade do |t|
     t.string "title", null: false
-    t.string "author", null: false
     t.string "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author"], name: "index_comments_on_author"
+    t.integer "author_id"
     t.index ["title"], name: "index_comments_on_title"
   end
 
   create_table "texts", force: :cascade do |t|
     t.string "title", null: false
     t.string "source", null: false
-    t.string "author", null: false
     t.string "content", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author"], name: "index_texts_on_author"
+    t.integer "author_id"
     t.index ["source"], name: "index_texts_on_source"
     t.index ["title"], name: "index_texts_on_title"
   end
