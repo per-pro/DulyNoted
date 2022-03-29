@@ -32,4 +32,7 @@ class User < ApplicationRecord
         self.session_token ||= SecureRandom.urlsafe_base64(16)
       end
     
+      has_many :comments,
+        class_name: 'Comment',
+        foreign_key: :author_id
 end

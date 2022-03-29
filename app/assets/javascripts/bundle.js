@@ -547,61 +547,10 @@ var Splash = function Splash() {
 /*!******************************************************!*\
   !*** ./frontend/components/text_form/text_index.jsx ***!
   \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-
-
-var TextIndex = /*#__PURE__*/function (_React$Component) {
-  _inherits(TextIndex, _React$Component);
-
-  var _super = _createSuper(TextIndex);
-
-  function TextIndex(props) {
-    _classCallCheck(this, TextIndex);
-
-    return _super.call(this, props);
-  }
-
-  _createClass(TextIndex, [{
-    key: "render",
-    value: function render() {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.props.logout
-      }, "Log Out");
-    }
-  }]);
-
-  return TextIndex;
-}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
-
-/* harmony default export */ __webpack_exports__["default"] = (TextIndex);
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/imfarhi/Desktop/DulyNoted/frontend/components/text_form/text_index.jsx: Adjacent JSX elements must be wrapped in an enclosing tag. Did you want a JSX fragment <>...</>? (13:12)\n\n\u001b[0m \u001b[90m 11 |\u001b[39m         \u001b[36mreturn\u001b[39m (\u001b[0m\n\u001b[0m \u001b[90m 12 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m onClick\u001b[33m=\u001b[39m{\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mprops\u001b[33m.\u001b[39mlogout}\u001b[33m>\u001b[39m\u001b[33mLog\u001b[39m \u001b[33mOut\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m             \u001b[33m<\u001b[39m\u001b[33mbutton\u001b[39m onClick\u001b[33m=\u001b[39m{}\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mbutton\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 14 |\u001b[39m         )\u001b[0m\n\u001b[0m \u001b[90m 15 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m\u001b[0m\n    at Object._raise (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:776:17)\n    at Object.raiseWithData (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:769:17)\n    at Object.raise (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:737:17)\n    at Object.jsxParseElementAt (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:4773:18)\n    at Object.jsxParseElement (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:4783:17)\n    at Object.parseExprAtom (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:4790:19)\n    at Object.parseExprSubscripts (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10248:23)\n    at Object.parseUpdate (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10228:21)\n    at Object.parseMaybeUnary (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10206:23)\n    at Object.parseExprOps (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10071:23)\n    at Object.parseMaybeConditional (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10045:23)\n    at Object.parseMaybeAssign (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10008:21)\n    at allowInAnd (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:9975:39)\n    at Object.allowInAnd (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:11647:12)\n    at Object.parseMaybeAssignAllowIn (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:9975:17)\n    at Object.parseParenAndDistinguishExpression (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10850:28)\n    at Object.parseExprAtom (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10568:21)\n    at Object.parseExprAtom (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:4795:20)\n    at Object.parseExprSubscripts (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10248:23)\n    at Object.parseUpdate (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10228:21)\n    at Object.parseMaybeUnary (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10206:23)\n    at Object.parseExprOps (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10071:23)\n    at Object.parseMaybeConditional (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10045:23)\n    at Object.parseMaybeAssign (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:10008:21)\n    at Object.parseExpressionBase (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:9953:23)\n    at allowInAnd (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:9947:39)\n    at Object.allowInAnd (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:11641:16)\n    at Object.parseExpression (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:9947:17)\n    at Object.parseReturnStatement (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:12145:28)\n    at Object.parseStatementContent (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:11824:21)");
 
 /***/ }),
 
@@ -615,6 +564,7 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _text_index_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text_index.jsx */ "./frontend/components/text_form/text_index.jsx");
+/* harmony import */ var _text_index_jsx__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_text_index_jsx__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
 
@@ -656,7 +606,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_text_index_jsx__WEBPACK_IMPORTED_MODULE_0__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_text_index_jsx__WEBPACK_IMPORTED_MODULE_0___default.a));
 
 /***/ }),
 
