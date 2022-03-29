@@ -11,3 +11,5 @@ Rails.application.routes.draw do
   
   root to: "static_pages#root"
 end
+
+# ask kenny to explain RESTful routes
