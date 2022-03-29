@@ -5,11 +5,11 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy]
     resources :texts, only: [:create, :index]
     resources :comments, only: [:create, :index]
-    resources :authors, only: [:create, :index, :show]
+    resources :authors, only: [:create, :index, :show, :edit]
 
   end
   
   root to: "static_pages#root"
 end
 
-# ask kenny to explain RESTful routes
+# ask coach to explain RESTful routes
