@@ -10,11 +10,11 @@ class TextIndex extends React.Component {
     render () {
         return (
             <button onClick={this.props.logout}>Log Out</button>
-            <button onClick={}></button>
         )
     }
 
 
+    // For tomorrow - figure out why my elements are not rendering in the text index.
 
 
 }
