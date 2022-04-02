@@ -596,6 +596,7 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
         onClick: this.props.logout
       }, "Log Out");
     } // For tomorrow - figure out why my elements are not rendering in the text index.
+    // blah
 
   }]);
 
