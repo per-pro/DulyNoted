@@ -40,4 +40,4 @@ class AuthorShow extends React.Component {
     }
 }
 
-export default ArtistShow;
+export default AuthorShow;

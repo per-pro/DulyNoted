@@ -1,5 +1,5 @@
 import React from "react";
-import ArtistsIndexItem from "./artists_index_item";
+import ArtistsIndexItem from "./authors_index_item";
 import { Link } from "react-router-dom";
 
 
