@@ -1,18 +1,18 @@
 import { connect } from "react-redux";
-import { requestArtist } from "../../actions/artist_actions";
-import ArtistShow from "./artist_show";
+import { requestAuthor } from "../../actions/author_actions";
+import AuthorShow from "./author_show";
 
 const mapSTP = (state, ownProps) => {
     return {
-        artist: state.entities.artists[ownProps.match.params.artistId],
+        author: state.entities.authors[ownProps.match.params.authorId],
         tracks: state.entities.tracks,
     }
 
 };
 
 const mapDTP = (dispatch, ownProps) => ({
-    requestArtist: (artistId) => dispatch(requestArtist(artistId)),
+    requestAuthor: (authorId) => dispatch(requestAuthor(authorId)),
 
 });
 
-export default connect(mapSTP, mapDTP)(ArtistShow);
+export default connect(mapSTP, mapDTP)(AuthorShow);
