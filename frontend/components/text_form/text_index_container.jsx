@@ -5,7 +5,7 @@ import {logout} from "../../actions/session_actions";
 const mapStateToProps = (state, ownProps) => (
   {
   text: state.entities.texts[ownProps.match.params.textId],
-  artists: state.entities.artists,
+  authors: state.entities.authors,
   comments: Object.values(state.entities.comments).sort((a,b) => {
       if (a.startIndex < b.startIndex) {
           return -1

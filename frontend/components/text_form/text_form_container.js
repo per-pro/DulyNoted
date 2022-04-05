@@ -4,7 +4,7 @@ import TrackShow from "./track_show";
 
 const mapSTP = (state, ownProps) => ({
     track: state.entities.tracks[ownProps.match.params.trackId],
-    artists: state.entities.artists,
+    authors: state.entities.authors,
     annotations: Object.values(state.entities.annotations).sort((a,b) => {
         if (a.startIndex < b.startIndex) {
             return -1

@@ -5,7 +5,7 @@ json.authors do
 end
 
 json.texts do
-    @artist.texts.each do |text|
+    @author.texts.each do |text|
         json.set! text.id do
             json.partial! 'api/texts/text', text: text
         end

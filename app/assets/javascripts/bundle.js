@@ -624,7 +624,7 @@ __webpack_require__.r(__webpack_exports__);
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
     text: state.entities.texts[ownProps.match.params.textId],
-    artists: state.entities.artists,
+    authors: state.entities.authors,
     comments: Object.values(state.entities.comments).sort(function (a, b) {
       if (a.startIndex < b.startIndex) {
         return -1;
