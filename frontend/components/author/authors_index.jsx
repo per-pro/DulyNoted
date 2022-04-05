@@ -50,7 +50,7 @@ class AuthorsIndex extends React.Component {
 
                     <h2 className='authors-index-header'>{this.letter} Authors on Lyrical</h2>
                     <ul className="authors-index">
-                        {artistItems}
+                        {authorItems}
                     </ul>
                 </div>
             </div>
