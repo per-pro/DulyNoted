@@ -595,9 +595,7 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         onClick: this.props.logout
       }, "Log Out");
-    } // For tomorrow - figure out why my elements are not rendering in the text index.
-    // blah
-
+    }
   }]);
 
   return TextIndex;

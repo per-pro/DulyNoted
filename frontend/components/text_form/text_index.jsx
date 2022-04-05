@@ -13,10 +13,6 @@ class TextIndex extends React.Component {
         )
     }
 
-
-    // For tomorrow - figure out why my elements are not rendering in the text index.
-
-
 }
 
 export default TextIndex;
