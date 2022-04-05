@@ -1,9 +1,9 @@
 import React from "react";
-import ArtistsIndexItem from "./authors_index_item";
+import AuthorsIndexItem from "./authors_index_item";
 import { Link } from "react-router-dom";
 
 
-class ArtistsIndex extends React.Component {
+class AuthorsIndex extends React.Component {
     constructor(props) {
         super(props)
         if (this.props.match.params.letter === undefined) {
@@ -15,12 +15,12 @@ class ArtistsIndex extends React.Component {
     }
 
     componentDidMount() {
-        this.props.requestArtists(this.props.match.params.letter)
+        this.props.requestAuthors(this.props.match.params.letter)
     }
 
     componentDidUpdate(prevProps) {
         if (this.props.match.params.letter != prevProps.match.params.letter) {
-            this.props.requestArtists(this.props.match.params.letter)
+            this.props.requestAuthors(this.props.match.params.letter)
             if (this.props.match.params.letter === undefined) {
                 this.letter = "All";
             }
@@ -33,11 +33,11 @@ class ArtistsIndex extends React.Component {
     }
 
     render() {
-        if (this.props.artists.order === undefined) return null;
-        let artistItems = this.props.artists.order.map(({ id }) => {
+        if (this.props.authors.order === undefined) return null;
+        let authorItems = this.props.authors.order.map(({ id }) => {
             return (
-                <ArtistsIndexItem 
-                    artist={this.props.artists[id]} 
+                <AuthorsIndexItem 
+                    author={this.props.authors[id]} 
                     key={id} 
                 />
             )
@@ -45,11 +45,11 @@ class ArtistsIndex extends React.Component {
 
         return (
             <div className="gray-out">
-                <div className="artists-index-container">
-                    <p className='artists-index-breadcrumbs'><Link to='/artists'>Artists</Link> > <span className="current-letter">{this.letter}</span></p>
+                <div className="authors-index-container">
+                    <p className='authors-index-breadcrumbs'><Link to='/authors'>Authors</Link> <span className="current-letter">{this.letter}</span></p>
 
-                    <h2 className='artists-index-header'>{this.letter} Artists on Lyrical</h2>
-                    <ul className="artists-index">
+                    <h2 className='authors-index-header'>{this.letter} Authors on Lyrical</h2>
+                    <ul className="authors-index">
                         {artistItems}
                     </ul>
                 </div>
@@ -58,4 +58,4 @@ class ArtistsIndex extends React.Component {
     }
 }
 
-export default ArtistsIndex;
+export default AuthorsIndex;
