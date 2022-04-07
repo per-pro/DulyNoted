@@ -548,9 +548,74 @@ var Splash = function Splash() {
   !*** ./frontend/components/text_form/text_index.jsx ***!
   \******************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/imfarhi/Desktop/DulyNoted/frontend/components/text_form/text_index.jsx: Unexpected token (25:11)\n\n\u001b[0m \u001b[90m 23 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m 24 |\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 25 |\u001b[39m     \u001b[36mreturn\u001b[39m {(\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 26 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33mol\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 27 |\u001b[39m             {trackTexts}\u001b[0m\n\u001b[0m \u001b[90m 28 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mol\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object._raise (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:776:17)\n    at Object.raiseWithData (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:769:17)\n    at Object.raise (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:737:17)\n    at Object.unexpected (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:9183:16)\n    at Object.parseClassMemberWithIsStatic (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:12739:12)\n    at Object.parseClassMember (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:12632:10)\n    at withTopicForbiddingContext (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:12577:14)\n    at Object.withTopicForbiddingContext (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:11616:14)\n    at Object.parseClassBody (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:12554:10)\n    at Object.parseClass (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:12527:22)\n    at Object.parseStatementContent (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:11818:21)\n    at Object.parseStatement (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:11776:17)\n    at Object.parseBlockOrModuleBlockBody (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:12358:25)\n    at Object.parseBlockBody (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:12349:10)\n    at Object.parseTopLevel (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:11707:10)\n    at Object.parse (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:13513:10)\n    at parse (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/parser/lib/index.js:13566:38)\n    at parser (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/core/lib/parser/index.js:54:34)\n    at parser.next (<anonymous>)\n    at normalizeFile (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/core/lib/transformation/normalize-file.js:99:38)\n    at normalizeFile.next (<anonymous>)\n    at run (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/core/lib/transformation/index.js:31:50)\n    at run.next (<anonymous>)\n    at Function.transform (/home/imfarhi/Desktop/DulyNoted/node_modules/@babel/core/lib/transform.js:27:41)\n    at transform.next (<anonymous>)\n    at step (/home/imfarhi/Desktop/DulyNoted/node_modules/gensync/index.js:261:32)\n    at gen.next (/home/imfarhi/Desktop/DulyNoted/node_modules/gensync/index.js:273:13)\n    at async.call.value (/home/imfarhi/Desktop/DulyNoted/node_modules/gensync/index.js:223:11)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+var TextIndex = /*#__PURE__*/function (_React$Component) {
+  _inherits(TextIndex, _React$Component);
+
+  var _super = _createSuper(TextIndex);
+
+  function TextIndex(props) {
+    _classCallCheck(this, TextIndex);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(TextIndex, [{
+    key: "render",
+    value: function render() {
+      var _this = this;
+
+      var trackTexts = Object.values(this.props.texts).map(function (text) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          onClick: _this.props.logout
+        }, "Log Out"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: text.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
+          to: '/texts' + text.id
+        })));
+      });
+    }
+  }, {
+    key: "return",
+    value: function _return() {
+      /*#__PURE__*/
+      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, trackTexts);
+    }
+  }]);
+
+  return TextIndex;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (TextIndex);
 
 /***/ }),
 
