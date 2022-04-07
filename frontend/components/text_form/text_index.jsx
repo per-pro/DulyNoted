@@ -9,8 +9,7 @@ class TextIndex extends React.Component {
 
     render () {
         return (
-            // <button onClick={this.props.logout}>Log Out</button>
-            <ul>Log Out</ul>
+            <button onClick={this.props.logout}>Log Out</button>
         )
     }
 

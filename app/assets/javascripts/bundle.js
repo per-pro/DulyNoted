@@ -592,11 +592,9 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(TextIndex, [{
     key: "render",
     value: function render() {
-      return (
-        /*#__PURE__*/
-        // <button onClick={this.props.logout}>Log Out</button>
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, "Log Out")
-      );
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.props.logout
+      }, "Log Out");
     }
   }]);
 
