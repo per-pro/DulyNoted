@@ -611,12 +611,7 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
           id: "author-text-source"
         }, text.source))))));
       });
-    }
-  }, {
-    key: "return",
-    value: function _return() {
-      /*#__PURE__*/
-      react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, trackTexts);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, trackTexts);
     }
   }]);
 

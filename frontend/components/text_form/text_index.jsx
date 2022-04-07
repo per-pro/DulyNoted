@@ -27,13 +27,14 @@ class TextIndex extends React.Component {
                     </div>
                 )
             })
+
+            return ( 
+                <ol>
+                    {trackTexts}
+                </ol>
+            )
     }
 
-    return () {
-        <ol>
-            {trackTexts}
-        </ol>
-    }
     
 }
 
