@@ -10,7 +10,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Splash from './splash/splash'
-import TextIndexContainer from './text_form/text_index_container'
+import TextIndexContainer from './text/text_show_container'
 
 
 const App = () => (

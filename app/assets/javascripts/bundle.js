@@ -240,7 +240,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./session_form/login_form_container */ "./frontend/components/session_form/login_form_container.jsx");
 /* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
 /* harmony import */ var _splash_splash__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./splash/splash */ "./frontend/components/splash/splash.jsx");
-/* harmony import */ var _text_form_text_index_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./text_form/text_index_container */ "./frontend/components/text_form/text_index_container.jsx");
+/* harmony import */ var _text_text_show_container__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./text/text_show_container */ "./frontend/components/text/text_show_container.js");
 
 
 
@@ -261,7 +261,7 @@ var App = function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__["ProtectedRoute"], {
     exact: true,
     path: "/",
-    component: _text_form_text_index_container__WEBPACK_IMPORTED_MODULE_6__["default"]
+    component: _text_text_show_container__WEBPACK_IMPORTED_MODULE_6__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__["AuthRoute"], {
     exact: true,
     path: "/",
@@ -543,10 +543,10 @@ var Splash = function Splash() {
 
 /***/ }),
 
-/***/ "./frontend/components/text_form/text_index.jsx":
-/*!******************************************************!*\
-  !*** ./frontend/components/text_form/text_index.jsx ***!
-  \******************************************************/
+/***/ "./frontend/components/text/text_index.jsx":
+/*!*************************************************!*\
+  !*** ./frontend/components/text/text_index.jsx ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -624,16 +624,16 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./frontend/components/text_form/text_index_container.jsx":
-/*!****************************************************************!*\
-  !*** ./frontend/components/text_form/text_index_container.jsx ***!
-  \****************************************************************/
+/***/ "./frontend/components/text/text_show_container.js":
+/*!*********************************************************!*\
+  !*** ./frontend/components/text/text_show_container.js ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _text_index_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text_index.jsx */ "./frontend/components/text_form/text_index.jsx");
+/* harmony import */ var _text_index_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text_index.jsx */ "./frontend/components/text/text_index.jsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
 
