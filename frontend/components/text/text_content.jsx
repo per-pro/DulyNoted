@@ -3,15 +3,15 @@ import React from "react";
 class TextContent extends React.Component {
 
     render () {
-        const { track, annotations, handleMouseUp, handleMouseDown, selectAnnotation } = this.props;
+        const { text, annotations, handleMouseUp, handleMouseDown, selectAnnotation } = this.props;
         let annotatedContent = [];
         let prevIndex = 0;
         let key = 0
 
         for (let i = 0; i < annotations.length; i++) {
             const annotation = annotations[i];
-            const content = track.contents.slice(annotation.startIndex, annotation.endIndex)
-            let before = track.contents.slice(prevIndex, annotation.startIndex);
+            const content = text.contents.slice(annotation.startIndex, annotation.endIndex)
+            let before = text.contents.slice(prevIndex, annotation.startIndex);
 
             annotatedContent.push(
                 <span key={key++} data-indexoffset={prevIndex}>
@@ -40,7 +40,7 @@ class TextContent extends React.Component {
             if (i === annotations.length - 1) {
                 annotatedContent.push(
                     <span key={key++} data-indexoffset={prevIndex}>
-                        {track.contents.slice(prevIndex, track.contents.length)}
+                        {text.contents.slice(prevIndex, text.contents.length)}
                     </span>
                 )
             }  
@@ -55,7 +55,7 @@ class TextContent extends React.Component {
         } else {
             return (
                 <p className="content-text" onMouseUp={handleMouseUp} onMouseDown={handleMouseDown} data-indexoffset={0}>
-                    {this.props.track.content}
+                    {this.props.text.content}
                 </p>
             )
         }

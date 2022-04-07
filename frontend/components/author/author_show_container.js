@@ -5,7 +5,7 @@ import AuthorShow from "./author_show";
 const mapSTP = (state, ownProps) => {
     return {
         author: state.entities.authors[ownProps.match.params.authorId],
-        tracks: state.entities.tracks,
+        texts: state.entities.texts,
     }
 
 };

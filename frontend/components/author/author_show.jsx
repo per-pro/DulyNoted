@@ -1,5 +1,5 @@
 import React from "react";
-import TracksIndex from "../track/tracks_index";
+import TextIndex from "../text/texts_index";
 
 
 class AuthorShow extends React.Component {
@@ -31,9 +31,9 @@ class AuthorShow extends React.Component {
                         <p className="author-bio">{this.props.author.bio}</p>
                     </div>
                 </div>
-                <div className="author-tracks">
-                    <p>POPULAR {this.props.author.name.toUpperCase()} TRACKS</p>
-                    <TextIndex tracks={this.props.tracks} />
+                <div className="author-texts">
+                    <p>POPULAR {this.props.author.name.toUpperCase()} TEXTS</p>
+                    <TextIndex texts={this.props.texts} />
                 </div>
             </div>
         )

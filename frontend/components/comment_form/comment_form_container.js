@@ -9,7 +9,7 @@ class AnnotationForm extends React.Component {
             body: this.props.annotation.body,
             start_index: parseInt(this.props.annotation.startIndex),
             end_index: parseInt(this.props.annotation.endIndex),
-            track_id: this.props.annotation.trackId,
+            text_id: this.props.annotation.textId,
         };
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -45,7 +45,7 @@ class AnnotationForm extends React.Component {
                 </div>
                 <div className="anno-form-container" onClick={(e) => e.stopPropagation()}>
                     <p className="annotation-lyric">
-                        {this.props.tracks[this.props.annotation.trackId]
+                        {this.props.texts[this.props.annotation.textId]
                             .lyrics
                             .split("")
                             .slice(this.props.annotation.startIndex, this.props.annotation.endIndex)
