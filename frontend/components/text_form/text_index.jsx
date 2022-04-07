@@ -3,9 +3,9 @@ import React from "react";
 
 class TextIndex extends React.Component {
 
-    constructor (props) {
-        super(props);
-    } 
+    // constructor (props) {
+    //     super(props);
+    // } 
 
     render () {
             let trackTexts = Object.values(this.props.texts).map((text) => {

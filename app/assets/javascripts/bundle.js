@@ -583,15 +583,18 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
 
   var _super = _createSuper(TextIndex);
 
-  function TextIndex(props) {
+  function TextIndex() {
     _classCallCheck(this, TextIndex);
 
-    return _super.call(this, props);
+    return _super.apply(this, arguments);
   }
 
   _createClass(TextIndex, [{
     key: "render",
-    value: function render() {
+    value: // constructor (props) {
+    //     super(props);
+    // } 
+    function render() {
       var _this = this;
 
       var trackTexts = Object.values(this.props.texts).map(function (text) {
