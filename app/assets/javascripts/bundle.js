@@ -554,6 +554,7 @@ var Splash = function Splash() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -578,23 +579,21 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var TextIndex = /*#__PURE__*/function (_React$Component) {
   _inherits(TextIndex, _React$Component);
 
   var _super = _createSuper(TextIndex);
 
-  function TextIndex() {
+  function TextIndex(props) {
     _classCallCheck(this, TextIndex);
 
-    return _super.apply(this, arguments);
+    return _super.call(this, props);
   }
 
   _createClass(TextIndex, [{
     key: "render",
-    value: // constructor (props) {
-    //     super(props);
-    // } 
-    function render() {
+    value: function render() {
       var _this = this;
 
       var trackTexts = Object.values(this.props.texts).map(function (text) {
@@ -602,7 +601,7 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
           onClick: _this.props.logout
         }, "Log Out"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
           key: text.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
           to: '/texts' + text.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           id: "author-text-item"
