@@ -9,13 +9,18 @@ class TextIndex extends React.Component {
 
     render () {
         return (
-            <button onClick={this.props.logout}>Log Out</button>
-            <li key={text.id}>
-
-            </li>
+            <div>
+                <button onClick={this.props.logout}>Log Out</button>
+                <li key={text.id}>
+                    <Link to={'/texts' + text.id}>
+                    </Link>
+                </li>
+            </div>
+            
         )
     }
-
+    
+    {/* NB: the empty link causes an error message */}
 }
 
 export default TextIndex;
