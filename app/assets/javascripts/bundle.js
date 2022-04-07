@@ -601,7 +601,15 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
           key: text.id
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(Link, {
           to: '/texts' + text.id
-        })));
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          id: "author-text-item"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          id: "author-text-info"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          id: "author-text-title"
+        }, text.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          id: "author-text-source"
+        }, text.source))))));
       });
     }
   }, {
