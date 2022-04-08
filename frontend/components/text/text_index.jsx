@@ -8,26 +8,35 @@ class TextIndex extends React.Component {
         super(props);
     } 
 
-    render () {
-            let trackTexts = Object.values(this.props.texts).map((text) => {
+    // First step - seed the db
+    // 
+
+    componentDidMount() {
+        console.log("hello")
+        this.props.requestText(1)
+    }
+
+    render() {
+            console.log(this.props)
+            // let trackTexts = Object.values(this.props.text).map((text) => {
                 return (
                     <div>
                         <button onClick={this.props.logout}>Log Out</button>
-                        <li key={text.id}>
-                            <Link to={'/texts' + text.id}>
-                                <div id="author-text-item">
+                        {/* <li key={text.id}> */}
+                            {/* <Link to={'/texts' + text.id}> */}
+                                {/* <div id="author-text-item"> */}
                                     {/* add in something here later for image url */}
-                                    <div id="author-text-info">
-                                        <p id="author-text-title">{text.title}</p>
-                                        <p id="author-text-source">{text.source}</p>
-                                    </div>
+                                    {/* <div id="author-text-info"> */}
+                                        {/* <p id="author-text-title">{text.title}</p> */}
+                                        {/* <p id="author-text-source">{text.source}</p> */}
+                                    {/* </div> */}
 
-                                </div>
-                            </Link>
-                        </li>
+                                {/* </div> */}
+                            {/* </Link> */}
+                        {/* </li> */}
                     </div>
                 )
-            })
+            // })
 
             return ( 
                 <ol>

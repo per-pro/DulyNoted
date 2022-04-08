@@ -9,6 +9,8 @@ export const receiveTexts = texts => ({
     texts
   });
   
-  export const fetchTexts = () => ({
+export const fetchTexts = () => ({
     type: FETCH_TEXTS
   });
+
+// use the api util to connect this to the backend

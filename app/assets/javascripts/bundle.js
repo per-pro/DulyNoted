@@ -220,7 +220,7 @@ var fetchTexts = function fetchTexts() {
   return {
     type: FETCH_TEXTS
   };
-};
+}; // use the api util to connect this to the backend
 
 /***/ }),
 
@@ -589,30 +589,25 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, TextIndex);
 
     return _super.call(this, props);
-  }
+  } // First step - seed the db
+  // 
+
 
   _createClass(TextIndex, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      console.log("hello");
+      this.props.requestText(1);
+    }
+  }, {
     key: "render",
     value: function render() {
-      var _this = this;
+      console.log(this.props); // let trackTexts = Object.values(this.props.text).map((text) => {
 
-      var trackTexts = Object.values(this.props.texts).map(function (text) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          onClick: _this.props.logout
-        }, "Log Out"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          key: text.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: '/texts' + text.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "author-text-item"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "author-text-info"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          id: "author-text-title"
-        }, text.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          id: "author-text-source"
-        }, text.source))))));
-      });
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        onClick: this.props.logout
+      }, "Log Out")); // })
+
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, trackTexts);
     }
   }]);
