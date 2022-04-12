@@ -9,7 +9,6 @@ class TextIndex extends React.Component {
     } 
 
     // First step - seed the db
-    // 
 
     componentDidMount() {
         console.log("hello")
