@@ -17,8 +17,8 @@ Text.destroy_all
 User.destroy_all
 
 # Authors
-spinoza = Author.create({ name, alive, birth_date, category, created_at, updated_at, death_date, description })
-kant = Author.create({ name, alive, birth_date, category, created_at, updated_at, death_date, description })
+spinoza = Author.create({ name: "Benedict de Spinoza", alive: false, birth_date: 1677, category: "philosopher", created_at: 2022, updated_at: 2022, death_date: 1677, description: "Wrote a book of ethics 'more geometrico'" })
+kant = Author.create({ name: "Immanuel Kant", alive: false, birth_date: 1724, category: "philosopher", created_at: 2022, updated_at: 2022, death_date: 1804, description: "Was awoken from his dogmatic slumber by Hume" })
 fichte = Author.create({ name, alive, birth_date, category, created_at, updated_at, death_date, description })
 schelling = Author.create({ name, alive, birth_date, category, created_at, updated_at, death_date, description })
 maimon = Author.create({ name, alive, birth_date, category, created_at, updated_at, death_date, description })
@@ -33,6 +33,7 @@ ilyenkov = Author.create({ name, alive, birth_date, category, created_at, update
 rose = Author.create({ name, alive, birth_date, category, created_at, updated_at, death_date, description })
 chitty = Author.create({ name, alive, birth_date, category, created_at, updated_at, death_date, description })
 zukofsky = Author.create({ name, alive, birth_date, category, created_at, updated_at, death_date, description })
+metcalfe = Author.create({ name, alive, birth_date, category, created_at, updated_at, death_date, description })
 ducasse = Author.create({ name, alive, birth_date, category, created_at, updated_at, death_date, description })
 # ok_go = Artist.create({ name: 'OK Go', bio: "Formed in Chicago in 1998, OK Go; Damian Kulash, Dan Konopka, Timothy Nordwind, and Andy Ross, is an indie alternative rock band, known for their eye-catching, low-budget music videos.
 
