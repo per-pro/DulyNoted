@@ -12,5 +12,7 @@
 require 'open-uri'
 
 Author.destroy_all
-Comment
+Comment.destroy_all
+Text.destroy_all
+User.destroy_all
 
