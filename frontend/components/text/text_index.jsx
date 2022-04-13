@@ -35,4 +35,6 @@ class TextIndex extends React.Component {
     
 }
 
+// why is the export default statement mad at me?
+
 export default TextIndex;
