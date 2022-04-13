@@ -37,8 +37,33 @@ firestone = Author.create({ name: "Shulamith Firestone", alive: false, birth_dat
 chitty = Author.create({ name: "Christopher Chitty", alive: false, birth_date: 1983, category: "genealogist", created_at: 2022, updated_at: 2022, death_date: 2015, description: "Synthesized Marxism and gay liberation" })
 metcalfe = Author.create({ name: "Xandra Metcalfe", alive: true, birth_date: 1990, category: "revolutionary, musician", created_at: 2022, updated_at: 2022, death_date: null, description: "A psychoanalytic communist and noise artist based in Melbourne, Australia." })
 ducasse = Author.create({ name: "Isidore Ducasse", alive: false, birth_date: 1846, category: "poet", created_at: 2022, updated_at: 2022, death_date: 1870, description: "Wrote a series of songs about evil and later turned towards setting out positive ethical maxims" })
-# ok_go = Artist.create({ name: 'OK Go', bio: "Formed in Chicago in 1998, OK Go; Damian Kulash, Dan Konopka, Timothy Nordwind, and Andy Ross, is an indie alternative rock band, known for their eye-catching, low-budget music videos.
 
-# In 2002, as Damian Kulash, Timothy Nordwind, Dan Konopka, and Andy Duncan, they released their self-titled debut, to generally positive claim, and has since attained a cult following among fans and critics alike.
+# Texts
 
-# In 2005, as Andy Duncan left, “Oh No” was released to more positive reviews, as Andy Ross joined, and “Here It Goes Again” reached #38 on the Billboard Hot 100."})
+manifesto = Text.create({ title: "The Communist Manifesto",
+                            source: "pamphlet",
+                            content: " A spectre is haunting Europe — the spectre of communism. All the powers of old Europe have entered into a holy alliance to exorcise this spectre: Pope and Tsar, Metternich and Guizot, French Radicals and German police-spies.
+
+                            Where is the party in opposition that has not been decried as communistic by its opponents in power? Where is the opposition that has not hurled back the branding reproach of communism, against the more advanced opposition parties, as well as against its reactionary adversaries?
+                            
+                            Two things result from this fact:
+                            
+                            I. Communism is already acknowledged by all European powers to be itself a power.
+                            
+                            II. It is high time that Communists should openly, in the face of the whole world, publish their views, their aims, their tendencies, and meet this nursery tale of the Spectre of Communism with a manifesto of the party itself.
+                            
+                            To this end, Communists of various nationalities have assembled in London and sketched the following manifesto, to be published in the English, French, German, Italian, Flemish and Danish languages... "
+                            author_id: marx.id})
+
+three_essays = Text.create({ title: "Three Essays on the Theory of Sexuality",
+                            source: "Standard Edition of the Complete Psychological Works of Sigmund Freud",
+                            content: "...Experience of the cases that are considered abnormal has shown us that in them the sexual instinct and the sexual object are merely soldered together
+                            —a fact which we have been in danger of overlooking in consequence of the uniformity of the normal picture, where the object appears to form part and
+                            parcel of the instinct. We are thus warned to loosen the bond that exists in our thoughts between instinct and object. It seems probable that the sexual instinct is
+                            in the first instance independent of its object; nor is its origin likely to be due to its object's attractions.... "
+                            author_id: marx.id})
+
+poesies = Text.create({     title: "Three Essays on the Theory of Sexuality",
+                            source: "Standard Edition of the Complete Psychological Works of Sigmund Freud",
+                            content: "...As long as my friends are still alive, I will not speak of death..... "
+                            author_id: ducasse.id})
