@@ -8,13 +8,7 @@ class TextIndex extends React.Component {
         super(props);
     } 
 
-    componentDidMount() {
-        console.log("hello")
-        this.props.requestText(1)
-    }
-
     render() {
-            console.log(this.props)
             let trackTexts = Object.values(this.props.text).map((text) => {
                 return (
                     <div>
@@ -30,16 +24,13 @@ class TextIndex extends React.Component {
                                 </div>
                             </Link>
                         </li>
+                    
+                    <ol>
+                        {trackTexts}
+                    </ol>
                     </div>
                 )
-            // })
-
-            return ( 
-                <ol>
-                    {trackTexts}
-                </ol>
-            )
-    }
+    })
 
     
 }
