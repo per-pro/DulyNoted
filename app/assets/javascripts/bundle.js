@@ -197,30 +197,47 @@ var logout = function logout() {
 /*!******************************************!*\
   !*** ./frontend/actions/text_actions.js ***!
   \******************************************/
-/*! exports provided: RECEIVE_TEXTS, FETCH_TEXTS, receiveTexts, fetchTexts */
+/*! exports provided: RECEIVE_TEXTS, RECEIVE_TEXT, receiveTexts, receiveText, requestTexts, requestText */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TEXTS", function() { return RECEIVE_TEXTS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_TEXTS", function() { return FETCH_TEXTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_TEXT", function() { return RECEIVE_TEXT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveTexts", function() { return receiveTexts; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchTexts", function() { return fetchTexts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveText", function() { return receiveText; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestTexts", function() { return requestTexts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestText", function() { return requestText; });
 /* harmony import */ var _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/session_api_util */ "./frontend/util/session_api_util.js");
 
 var RECEIVE_TEXTS = 'RECEIVE_TEXTS';
-var FETCH_TEXTS = 'FETCH_TEXTS';
-var receiveTexts = function receiveTexts(texts) {
+var RECEIVE_TEXT = 'RECEIVE_TEXT';
+var receiveTexts = function receiveTexts(text) {
   return {
     type: RECEIVE_TEXTS,
-    texts: texts
+    text: text
   };
 };
-var fetchTexts = function fetchTexts() {
+var receiveText = function receiveText(text) {
   return {
-    type: FETCH_TEXTS
+    type: RECEIVE_TEXT,
+    text: text
   };
-}; // use the api util to connect this to the backend
+};
+var requestTexts = function requestTexts(query) {
+  return function (dispatch) {
+    return TrackAPIUtil.searchTracks(query).then(function (payload) {
+      return dispatch(receiveTracks(payload));
+    });
+  };
+};
+var requestText = function requestText(textId) {
+  return function (dispatch) {
+    return TrackAPIUtil.receiveText(textId).then(function (text) {
+      return dispatch(receiveText(text));
+    });
+  };
+};
 
 /***/ }),
 
@@ -589,26 +606,30 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, TextIndex);
 
     return _super.call(this, props);
-  } // First step - seed the db
-  // 
-
+  }
 
   _createClass(TextIndex, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      console.log("hello");
-      this.props.requestText(1);
-    }
-  }, {
     key: "render",
     value: function render() {
-      console.log(this.props); // let trackTexts = Object.values(this.props.text).map((text) => {
+      var _this = this;
 
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.props.logout
-      }, "Log Out")); // })
-
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, trackTexts);
+      var trackTexts = Object.values(this.props.text).map(function (text) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          onClick: _this.props.logout
+        }, "Log Out"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: text.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: '/texts' + text.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          id: "author-text-item"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          id: "author-text-info"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          id: "author-text-title"
+        }, text.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          id: "author-text-source"
+        }, text.source))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, trackTexts));
+      });
     }
   }]);
 
