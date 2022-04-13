@@ -63,7 +63,7 @@ three_essays = Text.create({ title: "Three Essays on the Theory of Sexuality",
                             in the first instance independent of its object; nor is its origin likely to be due to its object's attractions.... "
                             author_id: marx.id})
 
-poesies = Text.create({     title: "Three Essays on the Theory of Sexuality",
-                            source: "Standard Edition of the Complete Psychological Works of Sigmund Freud",
+poesies = Text.create({     title: "Poesies",
+                            source: "Maldoror and Poesies",
                             content: "...As long as my friends are still alive, I will not speak of death..... "
                             author_id: ducasse.id})
