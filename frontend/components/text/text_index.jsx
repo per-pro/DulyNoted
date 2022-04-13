@@ -8,8 +8,6 @@ class TextIndex extends React.Component {
         super(props);
     } 
 
-    // First step - seed the db
-
     componentDidMount() {
         console.log("hello")
         this.props.requestText(1)
