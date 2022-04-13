@@ -24,5 +24,3 @@ export const requestText = (textId) => (dispatch) => (
         .then(text => dispatch(receiveText(text)))
 )
 
-
-// use the api util to connect this to the backend
