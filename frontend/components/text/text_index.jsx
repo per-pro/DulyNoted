@@ -32,7 +32,6 @@ class TextIndex extends React.Component {
                     </div>
                 )
         })
-        // this is a comment
 
     }
 }
