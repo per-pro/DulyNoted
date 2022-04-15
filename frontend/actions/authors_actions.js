@@ -10,17 +10,17 @@ export const receiveAuthors = (authors) => ({
     authors
 })
 
-export const receiveArtist = (author) => ({
+export const receiveAuthor = (author) => ({
     type: RECEIVE_ARTIST,
     author
 })
 
 export const requestAuthor = (authorId) => (dispatch) => (
-    AuthorAPIUtil.fetchAuthor(authorId)
+    AuthorAPIUtil.getAuthor(authorId)
         .then(author => dispatch(receiveAuthor(author)))
 )
 
 export const requestAuthors = (letter) => (dispatch) => (
-    AuthorAPIUtil.fetchAuthors(letter)
+    AuthorAPIUtil.getAuthors(letter)
         .then(authors => dispatch(receiveAuthors(authors)))
 )
