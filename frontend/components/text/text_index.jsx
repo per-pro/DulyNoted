@@ -9,6 +9,7 @@ class TextIndex extends React.Component {
     } 
 
     render() {
+        console.log(this.props)
             let trackTexts = Object.values(this.props.text).map((text) => {
                 return (
                     <div>
@@ -30,9 +31,10 @@ class TextIndex extends React.Component {
                     </ol>
                     </div>
                 )
-    })
+        })
+        // this is a comment
 
-    
-}}
+    }
+}
 
 export default TextIndex;
