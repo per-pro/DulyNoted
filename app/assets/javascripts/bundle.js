@@ -86,32 +86,80 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./frontend/actions/authors_actions.js":
+/*!*********************************************!*\
+  !*** ./frontend/actions/authors_actions.js ***!
+  \*********************************************/
+/*! exports provided: RECEIVE_AUTHORS, RECEIVE_AUTHOR, receiveAuthors, receiveAuthor, requestAuthor, requestAuthors */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_AUTHORS", function() { return RECEIVE_AUTHORS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_AUTHOR", function() { return RECEIVE_AUTHOR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAuthors", function() { return receiveAuthors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAuthor", function() { return receiveAuthor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestAuthor", function() { return requestAuthor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestAuthors", function() { return requestAuthors; });
+/* harmony import */ var _util_author_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/author_api_util */ "./frontend/util/author_api_util.js");
+
+var RECEIVE_AUTHORS = "RECEIVE_AUTHORS";
+var RECEIVE_AUTHOR = "RECEIVE_AUTHOR";
+var receiveAuthors = function receiveAuthors(authors) {
+  return {
+    type: RECEIVE_AUTHORS,
+    authors: authors
+  };
+};
+var receiveAuthor = function receiveAuthor(author) {
+  return {
+    type: RECEIVE_ARTIST,
+    author: author
+  };
+};
+var requestAuthor = function requestAuthor(authorId) {
+  return function (dispatch) {
+    return _util_author_api_util__WEBPACK_IMPORTED_MODULE_0__["getAuthor"](authorId).then(function (author) {
+      return dispatch(receiveAuthor(author));
+    });
+  };
+};
+var requestAuthors = function requestAuthors(letter) {
+  return function (dispatch) {
+    return _util_author_api_util__WEBPACK_IMPORTED_MODULE_0__["getAuthors"](letter).then(function (authors) {
+      return dispatch(receiveAuthors(authors));
+    });
+  };
+};
+
+/***/ }),
+
 /***/ "./frontend/actions/comment_actions.js":
 /*!*********************************************!*\
   !*** ./frontend/actions/comment_actions.js ***!
   \*********************************************/
-/*! exports provided: RECEIVE_COMMENTS, FETCH_COMMENTS, receiveComments, fetchComments */
+/*! exports provided: RECEIVE_COMMENTS, GET_COMMENTS, receiveComments, getComments */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_COMMENTS", function() { return RECEIVE_COMMENTS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FETCH_COMMENTS", function() { return FETCH_COMMENTS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GET_COMMENTS", function() { return GET_COMMENTS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveComments", function() { return receiveComments; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchComments", function() { return fetchComments; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getComments", function() { return getComments; });
 /* harmony import */ var _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/session_api_util */ "./frontend/util/session_api_util.js");
 
 var RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
-var FETCH_COMMENTS = 'FETCH_COMMENTS';
+var GET_COMMENTS = 'GET_COMMENTS';
 var receiveComments = function receiveComments(comments) {
   return {
     type: RECEIVE_COMMENTS,
     comments: comments
   };
 };
-var fetchComments = function fetchComments() {
+var getComments = function getComments() {
   return {
-    type: FETCH_COMMENTS
+    type: GET_COMMENTS
   };
 };
 
@@ -208,7 +256,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveText", function() { return receiveText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestTexts", function() { return requestTexts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestText", function() { return requestText; });
-/* harmony import */ var _util_session_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/session_api_util */ "./frontend/util/session_api_util.js");
+/* harmony import */ var _util_text_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/text_api_util */ "./frontend/util/text_api_util.js");
 
 var RECEIVE_TEXTS = 'RECEIVE_TEXTS';
 var RECEIVE_TEXT = 'RECEIVE_TEXT';
@@ -226,14 +274,14 @@ var receiveText = function receiveText(text) {
 };
 var requestTexts = function requestTexts(query) {
   return function (dispatch) {
-    return TrackAPIUtil.searchTracks(query).then(function (payload) {
+    return _util_text_api_util__WEBPACK_IMPORTED_MODULE_0__["searchTracks"](query).then(function (payload) {
       return dispatch(receiveTracks(payload));
     });
   };
 };
 var requestText = function requestText(textId) {
   return function (dispatch) {
-    return TrackAPIUtil.receiveText(textId).then(function (text) {
+    return _util_text_api_util__WEBPACK_IMPORTED_MODULE_0__["receiveText"](textId).then(function (text) {
       return dispatch(receiveText(text));
     });
   };
@@ -611,26 +659,29 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(TextIndex, [{
     key: "render",
     value: function render() {
-      var _this = this;
+      console.log(this.props); //     let trackTexts = Object.values(this.props.text).map((text) => {
+      //         return (
+      //             <div>
+      //                 <button onClick={this.props.logout}>Log Out</button>
+      //                 <li key={text.id}>
+      //                     <Link to={'/texts' + text.id}>
+      //                         <div id="author-text-item">
+      //                             {/* add in something here later for image url */}
+      //                             <div id="author-text-info">
+      //                                 <p id="author-text-title">{text.title}</p>
+      //                                 <p id="author-text-source">{text.source}</p>
+      //                             </div>
+      //                         </div>
+      //                     </Link>
+      //                 </li>
+      //             <ol>
+      //                 {trackTexts}
+      //             </ol>
+      //             </div>
+      //         )
+      // })
 
-      console.log(this.props);
-      var trackTexts = Object.values(this.props.text).map(function (text) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          onClick: _this.props.logout
-        }, "Log Out"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          key: text.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: '/texts' + text.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "author-text-item"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "author-text-info"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          id: "author-text-title"
-        }, text.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          id: "author-text-source"
-        }, text.source))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, trackTexts));
-      });
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Hello World");
     }
   }]);
 
@@ -744,16 +795,57 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /***/ }),
 
-/***/ "./frontend/reducers/comments_reducer.js":
-/*!***********************************************!*\
-  !*** ./frontend/reducers/comments_reducer.js ***!
-  \***********************************************/
+/***/ "./frontend/reducers/components/authors_reducer.js":
+/*!*********************************************************!*\
+  !*** ./frontend/reducers/components/authors_reducer.js ***!
+  \*********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_comment_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/comment_actions */ "./frontend/actions/comment_actions.js");
+/* harmony import */ var _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/text_actions */ "./frontend/actions/text_actions.js");
+/* harmony import */ var _actions_authors_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/authors_actions */ "./frontend/actions/authors_actions.js");
+
+
+
+var authorsReducer = function authorsReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_authors_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_AUTHOR"]:
+      return Object.assign({}, state, action.payload.authors);
+
+    case _actions_authors_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_AUTHORS"]:
+      return Object.assign({}, action.payload.authors);
+
+    case _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TEXT"]:
+      return Object.assign({}, state, action.payload.authors);
+
+    case _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TEXTS"]:
+      return Object.assign({}, action.payload.authors);
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (authorsReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/components/comments_reducer.js":
+/*!**********************************************************!*\
+  !*** ./frontend/reducers/components/comments_reducer.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_comment_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/comment_actions */ "./frontend/actions/comment_actions.js");
 
 
 var commentsReducer = function commentsReducer() {
@@ -775,6 +867,68 @@ var commentsReducer = function commentsReducer() {
 
 /***/ }),
 
+/***/ "./frontend/reducers/components/texts_reducer.js":
+/*!*******************************************************!*\
+  !*** ./frontend/reducers/components/texts_reducer.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/text_actions */ "./frontend/actions/text_actions.js");
+
+
+var textsReducer = function textsReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TEXTS"]:
+      return action.texts;
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (textsReducer);
+
+/***/ }),
+
+/***/ "./frontend/reducers/components/users_reducer.js":
+/*!*******************************************************!*\
+  !*** ./frontend/reducers/components/users_reducer.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+
+var usersReducer = function usersReducer() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
+      return Object.assign({}, state, _defineProperty({}, action.currentUser.id, action.currentUser));
+
+    default:
+      return state;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (usersReducer);
+
+/***/ }),
+
 /***/ "./frontend/reducers/entities_reducer.js":
 /*!***********************************************!*\
   !*** ./frontend/reducers/entities_reducer.js ***!
@@ -785,17 +939,20 @@ var commentsReducer = function commentsReducer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
-/* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
-/* harmony import */ var _texts_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./texts_reducer */ "./frontend/reducers/texts_reducer.js");
-/* harmony import */ var _comments_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./comments_reducer */ "./frontend/reducers/comments_reducer.js");
+/* harmony import */ var _components_users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/users_reducer */ "./frontend/reducers/components/users_reducer.js");
+/* harmony import */ var _components_texts_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/texts_reducer */ "./frontend/reducers/components/texts_reducer.js");
+/* harmony import */ var _components_authors_reducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/authors_reducer */ "./frontend/reducers/components/authors_reducer.js");
+/* harmony import */ var _components_comments_reducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/comments_reducer */ "./frontend/reducers/components/comments_reducer.js");
+
 
 
 
 
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
-  users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  texts: _texts_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
-  comments: _comments_reducer__WEBPACK_IMPORTED_MODULE_3__["default"]
+  users: _components_users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
+  texts: _components_texts_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
+  authors: _components_authors_reducer__WEBPACK_IMPORTED_MODULE_3__["default"],
+  comments: _components_comments_reducer__WEBPACK_IMPORTED_MODULE_4__["default"]
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
@@ -921,68 +1078,6 @@ var sessionReducer = function sessionReducer() {
 
 /***/ }),
 
-/***/ "./frontend/reducers/texts_reducer.js":
-/*!********************************************!*\
-  !*** ./frontend/reducers/texts_reducer.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/text_actions */ "./frontend/actions/text_actions.js");
-
-
-var textsReducer = function textsReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-  Object.freeze(state);
-
-  switch (action.type) {
-    case _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TEXTS"]:
-      return action.texts;
-
-    default:
-      return state;
-  }
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (textsReducer);
-
-/***/ }),
-
-/***/ "./frontend/reducers/users_reducer.js":
-/*!********************************************!*\
-  !*** ./frontend/reducers/users_reducer.js ***!
-  \********************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../actions/session_actions */ "./frontend/actions/session_actions.js");
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-
-
-var usersReducer = function usersReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments.length > 1 ? arguments[1] : undefined;
-  Object.freeze(state);
-
-  switch (action.type) {
-    case _actions_session_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_CURRENT_USER"]:
-      return Object.assign({}, state, _defineProperty({}, action.currentUser.id, action.currentUser));
-
-    default:
-      return state;
-  }
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (usersReducer);
-
-/***/ }),
-
 /***/ "./frontend/store/store.js":
 /*!*********************************!*\
   !*** ./frontend/store/store.js ***!
@@ -1008,6 +1103,35 @@ var configureStore = function configureStore() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);
+
+/***/ }),
+
+/***/ "./frontend/util/author_api_util.js":
+/*!******************************************!*\
+  !*** ./frontend/util/author_api_util.js ***!
+  \******************************************/
+/*! exports provided: getAuthors, getAuthor */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAuthors", function() { return getAuthors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getAuthor", function() { return getAuthor; });
+var getAuthors = function getAuthors(letter) {
+  return $.ajax({
+    url: '/api/authors',
+    method: 'GET',
+    data: {
+      letter: letter
+    }
+  });
+};
+var getAuthor = function getAuthor(authorId) {
+  return $.ajax({
+    url: "/api/authors/".concat(authorId),
+    method: 'GET'
+  });
+};
 
 /***/ }),
 
@@ -1107,6 +1231,38 @@ var logout = function logout() {
   return $.ajax({
     url: '/api/session',
     method: 'DELETE'
+  });
+};
+
+/***/ }),
+
+/***/ "./frontend/util/text_api_util.js":
+/*!****************************************!*\
+  !*** ./frontend/util/text_api_util.js ***!
+  \****************************************/
+/*! exports provided: searchTexts, receiveText */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchTexts", function() { return searchTexts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveText", function() { return receiveText; });
+var searchTexts = function searchTexts(query) {
+  return $.ajax({
+    url: '/api/texts',
+    method: 'GET',
+    data: {
+      query: query
+    }
+  });
+};
+var receiveText = function receiveText() {
+  return $.ajax({
+    method: GET,
+    url: '/api/texts',
+    error: function error(err) {
+      return console.log(err);
+    }
   });
 };
 

@@ -1,4 +1,4 @@
-import * as APIUtil from '../util/session_api_util';
+import * as APIUtil from '../util/text_api_util';
 
 
 export const RECEIVE_TEXTS = 'RECEIVE_TEXTS';
@@ -15,12 +15,12 @@ export const receiveText = (text) => ({
   });
   
 export const requestTexts = (query) => (dispatch) => (
-      TrackAPIUtil.searchTracks(query)
+      APIUtil.searchTracks(query)
           .then(payload => dispatch(receiveTracks(payload)))
 )
 
 export const requestText = (textId) => (dispatch) => (
-    TrackAPIUtil.receiveText(textId)
+    APIUtil.receiveText(textId)
         .then(text => dispatch(receiveText(text)))
 )
 

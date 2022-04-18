@@ -1,4 +1,4 @@
-import { RECEIVE_TEXTS } from "../actions/text_actions";
+import { RECEIVE_TEXTS } from "../../actions/text_actions";
 
 const textsReducer = (state = {}, action) => {
   Object.freeze(state);
