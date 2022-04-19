@@ -800,9 +800,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/text_actions */ "./frontend/actions/text_actions.js");
-/* harmony import */ var _actions_authors_actions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../actions/authors_actions */ "./frontend/actions/authors_actions.js");
-
+/* harmony import */ var _actions_authors_actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../actions/authors_actions */ "./frontend/actions/authors_actions.js");
 
 
 var authorsReducer = function authorsReducer() {
@@ -811,15 +809,11 @@ var authorsReducer = function authorsReducer() {
   Object.freeze(state);
 
   switch (action.type) {
-    case _actions_authors_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_AUTHOR"]:
+    case _actions_authors_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_AUTHOR"]:
       return Object.assign({}, state, action.payload.authors);
 
-    case _actions_authors_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_AUTHORS"]:
+    case _actions_authors_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_AUTHORS"]:
       return Object.assign({}, action.payload.authors);
-    // case RECEIVE_TEXT:
-    //     return Object.assign({}, state, action.payload.authors)
-    // case RECEIVE_TEXTS:
-    //     return Object.assign({}, action.payload.authors)
 
     default:
       return state;

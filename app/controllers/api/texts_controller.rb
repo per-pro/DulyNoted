@@ -18,6 +18,9 @@ class Api::TextsController < ApplicationController
         end 
     end
 
-    # write out show
+    def show
+        @text = Text.includes(:texts).find_by(id: params[:id])
+        render :show
+    end
 
 end
