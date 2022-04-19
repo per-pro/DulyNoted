@@ -15,8 +15,8 @@ export const receiveText = (text) => ({
   });
   
 export const requestTexts = (query) => (dispatch) => (
-      APIUtil.searchTracks(query)
-          .then(payload => dispatch(receiveTracks(payload)))
+      APIUtil.searchTexts(query)
+          .then(payload => dispatch(receiveTexts(payload)))
 )
 
 export const requestText = (textId) => (dispatch) => (

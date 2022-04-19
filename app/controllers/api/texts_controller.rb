@@ -16,6 +16,8 @@ class Api::TextsController < ApplicationController
         else 
             render :new, status: :error
         end 
-    end 
+    end
+
+    # write out show
 
 end

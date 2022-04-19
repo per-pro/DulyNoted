@@ -274,8 +274,8 @@ var receiveText = function receiveText(text) {
 };
 var requestTexts = function requestTexts(query) {
   return function (dispatch) {
-    return _util_text_api_util__WEBPACK_IMPORTED_MODULE_0__["searchTracks"](query).then(function (payload) {
-      return dispatch(receiveTracks(payload));
+    return _util_text_api_util__WEBPACK_IMPORTED_MODULE_0__["searchTexts"](query).then(function (payload) {
+      return dispatch(receiveTexts(payload));
     });
   };
 };
@@ -657,30 +657,34 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
   }
 
   _createClass(TextIndex, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.props.requestText(4);
+    }
+  }, {
     key: "render",
     value: function render() {
-      console.log(this.props); //     let trackTexts = Object.values(this.props.text).map((text) => {
-      //         return (
-      //             <div>
-      //                 <button onClick={this.props.logout}>Log Out</button>
-      //                 <li key={text.id}>
-      //                     <Link to={'/texts' + text.id}>
-      //                         <div id="author-text-item">
-      //                             {/* add in something here later for image url */}
-      //                             <div id="author-text-info">
-      //                                 <p id="author-text-title">{text.title}</p>
-      //                                 <p id="author-text-source">{text.source}</p>
-      //                             </div>
-      //                         </div>
-      //                     </Link>
-      //                 </li>
-      //             <ol>
-      //                 {trackTexts}
-      //             </ol>
-      //             </div>
-      //         )
-      // })
+      var _this = this;
 
+      if (this.props.text === undefined) return null;
+      console.log(this.props);
+      var trackTexts = Object.values(this.props.text).map(function (text) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+          onClick: _this.props.logout
+        }, "Log Out"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: text.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+          to: '/texts' + text.id
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          id: "author-text-item"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          id: "author-text-info"
+        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          id: "author-text-title"
+        }, text.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          id: "author-text-source"
+        }, text.source))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, trackTexts));
+      });
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Hello World");
     }
   }]);
@@ -704,6 +708,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _text_index_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text_index.jsx */ "./frontend/components/text/text_index.jsx");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
+/* harmony import */ var _actions_text_actions_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/text_actions.js */ "./frontend/actions/text_actions.js");
+
 
 
 
@@ -724,19 +730,9 @@ var mapStateToProps = function mapStateToProps(state, ownProps) {
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
   return {
-    requestText: function (_requestText) {
-      function requestText(_x) {
-        return _requestText.apply(this, arguments);
-      }
-
-      requestText.toString = function () {
-        return _requestText.toString();
-      };
-
-      return requestText;
-    }(function (textId) {
-      return dispatch(requestText(textId));
-    }),
+    requestText: function requestText(textId) {
+      return dispatch(Object(_actions_text_actions_js__WEBPACK_IMPORTED_MODULE_3__["requestText"])(textId));
+    },
     logout: function logout() {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["logout"])());
     }
@@ -820,12 +816,10 @@ var authorsReducer = function authorsReducer() {
 
     case _actions_authors_actions__WEBPACK_IMPORTED_MODULE_1__["RECEIVE_AUTHORS"]:
       return Object.assign({}, action.payload.authors);
-
-    case _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TEXT"]:
-      return Object.assign({}, state, action.payload.authors);
-
-    case _actions_text_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_TEXTS"]:
-      return Object.assign({}, action.payload.authors);
+    // case RECEIVE_TEXT:
+    //     return Object.assign({}, state, action.payload.authors)
+    // case RECEIVE_TEXTS:
+    //     return Object.assign({}, action.payload.authors)
 
     default:
       return state;
@@ -1258,7 +1252,7 @@ var searchTexts = function searchTexts(query) {
 };
 var receiveText = function receiveText() {
   return $.ajax({
-    method: GET,
+    method: 'GET',
     url: '/api/texts',
     error: function error(err) {
       return console.log(err);

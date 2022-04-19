@@ -8,7 +8,7 @@ export const searchTexts = (query) => (
 
 export const receiveText = () => {
     return $.ajax({
-      method: GET,
+      method: 'GET',
       url: '/api/texts',
       error: (err) => console.log(err)
     })

@@ -1,6 +1,7 @@
 import TextIndex from "./text_index.jsx";
 import {connect} from "react-redux";
 import {logout} from "../../actions/session_actions";
+import { requestText } from "../../actions/text_actions.js";
 
 const mapStateToProps = (state, ownProps) => (
   {

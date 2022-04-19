@@ -8,10 +8,10 @@ const authorsReducer = (state = {}, action) => {
             return Object.assign({}, state, action.payload.authors)
         case RECEIVE_AUTHORS:
             return Object.assign({}, action.payload.authors)
-        case RECEIVE_TEXT:
-            return Object.assign({}, state, action.payload.authors)
-        case RECEIVE_TEXTS:
-            return Object.assign({}, action.payload.authors)
+        // case RECEIVE_TEXT:
+        //     return Object.assign({}, state, action.payload.authors)
+        // case RECEIVE_TEXTS:
+        //     return Object.assign({}, action.payload.authors)
         default:
             return state;
     }
