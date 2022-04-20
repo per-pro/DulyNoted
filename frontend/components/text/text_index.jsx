@@ -9,7 +9,7 @@ class TextIndex extends React.Component {
     } 
 
     componentDidMount() {
-        this.props.requestText(4)
+        this.props.requestText(6)
     }
 
     render() {
@@ -37,9 +37,7 @@ class TextIndex extends React.Component {
                     </div>
                 )
         })
-        return <div>
-            Hello World
-        </div>
+ 
     }
 }
 

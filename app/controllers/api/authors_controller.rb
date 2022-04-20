@@ -19,12 +19,7 @@ class Api::AuthorsController < ApplicationController
     end
 
     def edit
-        @author = author_id.find(params[:id]) 
-        # this line of code might be wrong, 
-        # I'm not sure if this is the right syntax
+        @author = Author.find(params[:id]) 
         render :edit
     end
-
-    # should I add other routing actions? I can add them as they become necessary
-
 end

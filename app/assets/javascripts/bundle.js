@@ -659,7 +659,7 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(TextIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.requestText(4);
+      this.props.requestText(6);
     }
   }, {
     key: "render",
@@ -685,7 +685,6 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
           id: "author-text-source"
         }, text.source))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, trackTexts));
       });
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, "Hello World");
     }
   }]);
 
