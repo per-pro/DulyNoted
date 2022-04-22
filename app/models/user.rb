@@ -33,6 +33,5 @@ class User < ApplicationRecord
       end
     
       has_many :comments,
-        class_name: 'Comment',
         foreign_key: :author_id
 end
