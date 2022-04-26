@@ -1,7 +1,8 @@
 class Api::TextsController < ApplicationController
 
     def index
-        @texts = Text.all 
+        @texts = Text.all
+        render :index
     end
 
     def new 
