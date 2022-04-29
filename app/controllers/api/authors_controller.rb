@@ -22,4 +22,6 @@ class Api::AuthorsController < ApplicationController
         @author = Author.find(params[:id]) 
         render :edit
     end
+
+    # might need to add author show
 end
