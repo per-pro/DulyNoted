@@ -23,5 +23,4 @@ class Api::AuthorsController < ApplicationController
         render :edit
     end
 
-    # might need to add author show
 end
