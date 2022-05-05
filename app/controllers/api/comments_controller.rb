@@ -16,5 +16,10 @@ class Api::CommentsController < ApplicationController
         else 
             render :new, status: :error
         end 
-    end 
+    end
+
+    def edit
+        @comment = Comment.find(params[:id]) 
+        render :edit
+    end
 end
