@@ -8,8 +8,6 @@ const commentsReducer = (state = {}, action) => {
     default:
       return state;
   }
-
-  //this is a test
 };
 
 export default commentsReducer;
