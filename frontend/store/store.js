@@ -12,6 +12,5 @@ const configureStore = (preloadedState = {}) => (
   )
 );
 
-// make sure the store is working correctly
 
 export default configureStore;
