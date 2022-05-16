@@ -21,5 +21,4 @@ document.addEventListener("DOMContentLoaded", () => {
   window.store = store;
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store}/>, root);
-  // ReactDOM.render(<h1>hi</h1>, root);
 });

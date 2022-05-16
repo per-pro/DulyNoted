@@ -37,9 +37,6 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
-        <header>
-          <h1 id="title">D&nbsp; U&nbsp; L&nbsp; Y &nbsp;&nbsp;&nbsp; N&nbsp; O&nbsp; T&nbsp; E&nbsp; D</h1>   
-        </header>
 
         <form onSubmit={this.handleSubmit} className="login-form-box">
           Welcome to DulyNoted!
