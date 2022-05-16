@@ -10,8 +10,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Greeting from "./greeting/greeting";
-import Splash from './splash/splash'
-import TextIndexContainer from './text/text_show_container'
+import TextIndex from './text/text_show_container'
 
 
 const App = () => (
@@ -23,7 +22,7 @@ const App = () => (
       <Switch>
         <Route exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <Route exact path="/" component={TextIndexContainer}/>
+        {/* <Route exact path="/" component={}/> */}
         {/* <Redirect to="/" component={}/> */}
       </Switch>
     </main>
