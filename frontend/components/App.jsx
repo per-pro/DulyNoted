@@ -15,9 +15,9 @@ import TextIndexContainer from './text/text_show_container'
 
 const App = () => (
   <div>
-    {/* <header>
+    <header>
             <h1 id="header">D&nbsp; U&nbsp; L&nbsp; Y &nbsp;&nbsp;&nbsp; N&nbsp; O&nbsp; T&nbsp; E&nbsp; D</h1>   
-    </header> */}
+    </header>
     <main>
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
