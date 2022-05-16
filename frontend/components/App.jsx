@@ -10,6 +10,7 @@ import SignupFormContainer from './session_form/signup_form_container';
 import LoginFormContainer from './session_form/login_form_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Greeting from "./greeting/greeting";
+import Home from "./home/home"
 import TextIndex from './text/text_show_container'
 
 
@@ -22,7 +23,7 @@ const App = () => (
       <Switch>
         <Route exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        {/* <Route exact path="/" component={}/> */}
+        <Route exact path="/" component={Home}/>
         {/* <Redirect to="/" component={}/> */}
       </Switch>
     </main>
