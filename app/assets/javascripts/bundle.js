@@ -667,6 +667,7 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
       var _this = this;
 
       if (this.props.text === undefined) return null;
+      debugger;
       console.log(this.props);
       var trackTexts = Object.values(this.props.text).map(function (text) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
@@ -785,7 +786,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var root = document.getElementById("root");
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
-  }), root);
+  }), root); // ReactDOM.render(<h1>hi</h1>, root);
 });
 
 /***/ }),
@@ -846,8 +847,7 @@ var commentsReducer = function commentsReducer() {
 
     default:
       return state;
-  } //this is a test
-
+  }
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (commentsReducer);

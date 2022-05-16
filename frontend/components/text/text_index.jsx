@@ -14,6 +14,7 @@ class TextIndex extends React.Component {
 
     render() {
         if (this.props.text === undefined) return null 
+        debugger
         console.log(this.props)
             let trackTexts = Object.values(this.props.text).map((text) => {
                 return (
