@@ -47,7 +47,12 @@ a {
 
 .login-signup {
     width: 100%;
-
+    font-size: 24px !important;
+    background-color: yellow;
+    color: white;
+    width: 100%;
+    text-align: center;
+    text-shadow: 2px 2px 8px black;
 }
 
 #title {

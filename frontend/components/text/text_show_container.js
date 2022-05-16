@@ -3,8 +3,8 @@ import {connect} from "react-redux";
 import {logout} from "../../actions/session_actions";
 import { requestText } from "../../actions/text_actions.js";
 
-const mapStateToProps = (state, ownProps) => (
-  {
+const mapStateToProps = (state, ownProps) => {
+  return {
     text: state.entities.texts[ownProps.match.params.textId],
     authors: state.entities.authors,
     comments: Object.values(state.entities.comments).sort((a,b) => {
@@ -14,8 +14,8 @@ const mapStateToProps = (state, ownProps) => (
             return 1
         }
     }),
-  
-});
+  };
+}
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   requestText: (textId) => dispatch(requestText(textId)),
