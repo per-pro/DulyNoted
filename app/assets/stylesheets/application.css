@@ -33,7 +33,7 @@ header {
 
 h1 {
     font-size: 24px !important;
-    background-color: yellow;
+    background-color: rgb(255, 255, 100);
     color: white;
     width: 100%;
     text-align: center;
@@ -41,14 +41,14 @@ h1 {
 }
 
 a {
-    background-color: yellow;
+    background-color: rgb(255, 255, 100);
     text-decoration: none;
 }
 
 .login-signup {
     width: 100%;
     font-size: 24px !important;
-    background-color: yellow;
+    background-color: rgb(255, 255, 100);
     color: white;
     width: 100%;
     text-align: center;
