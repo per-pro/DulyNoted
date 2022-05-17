@@ -406,21 +406,29 @@ var Home = function Home() {
     className: "home-container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "news"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "news"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "New Translation of Dante's Purgatorio Incorporates Contemporary Jargon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Its use of selfies and references to pop culture has the literary world buzzing. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "New Translation of Dante's Purgatorio Incorporates Contemporary Jargon"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Its use of selfies and references to pop culture has the literary world buzzing. "), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "by Jebediah Brownsworthy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://i0.wp.com/hyperallergic-newspack.s3.amazonaws.com/uploads/2021/11/PURGATORIO-scaled.jpeg?resize=1200%2C1791&quality=100&ssl=1",
     height: 400,
     width: 300
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "news"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The Believer Magazine returns to McSweeney's"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Magazine was previously owned by Paradise media and UNLV"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The Believer Magazine returns to McSweeney's"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Magazine was previously owned by Paradise media and UNLV"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "by Adele Delacruz"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: "https://hyoom.com/wp-content/uploads/2018/05/McSweeneys.jpg",
     height: 400,
     width: 300
   })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "news"
-  })));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "The University at Buffalo Receives Federal Grant for Joyce Museum"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Collection includes censored first edition of A Farewell to Arms with vulgarity reinserted by Hemingway"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "by Adele Delacruz"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://i.pinimg.com/474x/eb/79/74/eb79749d5c350054817f46b8db4fefc5--james-joyce-james-darcy.jpg",
+    height: 400,
+    width: 300
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "news"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "German Health Minister Quotes Hegel in Defense of Vaccination"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", null, "Lauterbach advocates for mandatory vaccination"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", null, "by Jebediah Brownworthy"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: "https://i.redd.it/7rmd3cnqzce81.jpg",
+    height: 400,
+    width: 300
+  }))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Home); // refactor this later so that title and sign in are on the same line
