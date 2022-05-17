@@ -68,11 +68,32 @@ a {
 
 #stretch {
     align-self: stretch;
+    display: flex;
+    flex-direction: row;
+}
+
+#stretch-image {
+    justify-content: right;
+}
+
+#stretch-text {
+    display: flex;
+    flex-direction: column;
 }
 
 #cluster {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+#cluster-text {
+    display: flex;
+    flex-direction: column;
+}
+
+#cluster-image {
+    justify-content: right;
 }
 
 #session {
