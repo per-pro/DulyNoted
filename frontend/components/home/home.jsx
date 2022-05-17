@@ -54,4 +54,6 @@ const Home = () => {
     )
 }
 
+// need to (1) insert lines, (2) space out images, (3) make sure they link to the full stories
+
 export default Home;
