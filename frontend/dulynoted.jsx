@@ -23,5 +23,4 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={store}/>, root);
 });
 
-// make a home page (/ in app.jsx) with fake news story
 // render something when I login

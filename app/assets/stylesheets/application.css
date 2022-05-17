@@ -61,6 +61,20 @@ a {
     text-shadow: 2px 2px 8px black;
 }
 
+.news {
+    display: flex;
+    flex-direction: column
+}
+
+#stretch {
+    align-self: stretch;
+}
+
+#cluster {
+    display: flex;
+    flex-direction: row;
+}
+
 #session {
     justify-self: right;
 }
