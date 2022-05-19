@@ -53,7 +53,7 @@ const Greeting = ({ currentUser, logout }) => {
       </div>
 
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn"></button>
+        <button onclick="myFunction()" class="dropbtn">EARN IQ</button>
         <div id="myDropdown" class="dropdown-content">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
@@ -62,7 +62,7 @@ const Greeting = ({ currentUser, logout }) => {
       </div>  
 
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+        <button onclick="myFunction()" class="dropbtn">IQ</button>
         <div id="myDropdown" class="dropdown-content">
           <a href="#">Link 1</a>
           <a href="#">Link 2</a>
