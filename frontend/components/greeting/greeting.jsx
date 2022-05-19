@@ -18,55 +18,48 @@ const Greeting = ({ currentUser, logout }) => {
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">FORUMS</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <p>Notifications</p>
+          {/* decide whether I want to include this feature */}
         </div>
       </div>
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">FEED</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          <p>Notifications</p>
+            {/* decide whether I want to include this feature */}
         </div>
       </div>  
-
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">ME</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          {/* Up and down votes go here */}
         </div>
       </div>  
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">MESSAGES</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          {/* messages go here */}
         </div>
       </div>
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">EARN IQ</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          {/* unanswered questions go here */}
         </div>
       </div>  
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">IQ</button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+          {/* ACCOUNT
+              View Profile
+              Report a Problem
+              Sign Out
+              Firehose */}
         </div>
       </div>  
       {/* <button onClick={logout}>Logout</button>  refactor so that logout is in a drop down menu */}
