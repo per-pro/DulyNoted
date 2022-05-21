@@ -19,7 +19,6 @@ const Greeting = ({ currentUser, logout }) => {
         <button onclick="myFunction()" class="dropbtn">FORUMS</button>
         <div id="myDropdown" class="dropdown-content">
           <p>Notifications</p>
-          {/* decide whether I want to include this feature */}
         </div>
       </div>
 
@@ -27,7 +26,6 @@ const Greeting = ({ currentUser, logout }) => {
         <button onclick="myFunction()" class="dropbtn">FEED</button>
         <div id="myDropdown" class="dropdown-content">
           <p>Notifications</p>
-            {/* decide whether I want to include this feature */}
         </div>
       </div>  
 
