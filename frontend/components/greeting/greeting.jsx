@@ -60,7 +60,6 @@ const Greeting = ({ currentUser, logout }) => {
               Firehose */}
         </div>
       </div>  
-      {/* <button onClick={logout}>Logout</button>  refactor so that logout is in a drop down menu */}
     </hgroup>
   );
   console.log(currentUser)
