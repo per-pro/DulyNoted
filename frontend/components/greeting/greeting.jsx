@@ -32,32 +32,32 @@ const Greeting = ({ currentUser, logout }) => {
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">ME</button>
         <div id="myDropdown" class="dropdown-content">
-          {/* Up and down votes go here */}
+          Up and down votes go here
         </div>
       </div>  
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">MESSAGES</button>
         <div id="myDropdown" class="dropdown-content">
-          {/* messages go here */}
+          messages go here
         </div>
       </div>
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">EARN IQ</button>
         <div id="myDropdown" class="dropdown-content">
-          {/* unanswered questions go here */}
+          unanswered questions go here
         </div>
       </div>  
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">IQ</button>
         <div id="myDropdown" class="dropdown-content">
-          {/* ACCOUNT
+          ACCOUNT
               View Profile
               Report a Problem
               Sign Out
-              Firehose */}
+              Firehose
         </div>
       </div>  
     </hgroup>
