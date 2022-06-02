@@ -16,7 +16,8 @@ const Greeting = ({ currentUser, logout }) => {
     <hgroup className="header-group">
       <h1 id="title">D&nbsp; U&nbsp; L&nbsp; Y &nbsp;&nbsp;&nbsp; N&nbsp; O&nbsp; T&nbsp; E&nbsp; D</h1>
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">FORUMS</button>
+      <i class="fa-solid fa-thumbtack"></i>
+      <button onclick="myFunction()" class="dropbtn">FORUMS</button>
         <div id="myDropdown" class="dropdown-content">
           {/* Notifications should show up if there are any
               Otherwise it should say No Notifications */}
@@ -24,6 +25,7 @@ const Greeting = ({ currentUser, logout }) => {
       </div>
 
       <div class="dropdown">
+      <i class="fa-solid fa-bolt-lightning"></i>
         <button onclick="myFunction()" class="dropbtn">FEED</button>
         <div id="myDropdown" class="dropdown-content">
           {/* Notifications should show up if there are any
@@ -32,6 +34,7 @@ const Greeting = ({ currentUser, logout }) => {
       </div>  
 
       <div class="dropdown">
+      <i class="fa-solid fa-bell"></i>
         <button onclick="myFunction()" class="dropbtn">ME</button>
         <div id="myDropdown" class="dropdown-content">
           {/* Up and down votes live here
@@ -40,6 +43,7 @@ const Greeting = ({ currentUser, logout }) => {
       </div>  
 
       <div class="dropdown">
+      <i class="fa-solid fa-envelope"></i>
         <button onclick="myFunction()" class="dropbtn">MESSAGES</button>
         <div id="myDropdown" class="dropdown-content">
           {/* In the menu there should be a title: MESSAGES in all caps on the left
@@ -48,7 +52,8 @@ const Greeting = ({ currentUser, logout }) => {
         </div>
       </div>
 
-      <div class="dropdown">
+      <div class="dropdown">'
+      <i class="fa-solid fa-lightbulb-on"></i>
         <button onclick="myFunction()" class="dropbtn">EARN IQ</button>
         <div id="myDropdown" class="dropdown-content">
           {/* Title: IQ OPPORTUNITIES
@@ -57,6 +62,7 @@ const Greeting = ({ currentUser, logout }) => {
       </div>  
 
       <div class="dropdown">
+        {/* user profile pic should appear here */}
         <button onclick="myFunction()" class="dropbtn">IQ</button>
         <div id="myDropdown" class="dropdown-content">
           {/* ACCOUNT
