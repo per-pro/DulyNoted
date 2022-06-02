@@ -18,46 +18,52 @@ const Greeting = ({ currentUser, logout }) => {
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">FORUMS</button>
         <div id="myDropdown" class="dropdown-content">
-          <p>Notifications</p>
+          {/* Notifications should show up if there are any
+              Otherwise it should say No Notifications */}
         </div>
       </div>
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">FEED</button>
         <div id="myDropdown" class="dropdown-content">
-          <p>Notifications</p>
+          {/* Notifications should show up if there are any
+              Otherwise it should say No Notifications */}
         </div>
       </div>  
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">ME</button>
         <div id="myDropdown" class="dropdown-content">
-          Up and down votes go here
+          {/* Up and down votes live here
+              Marks on annotations also live here */}
         </div>
       </div>  
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">MESSAGES</button>
         <div id="myDropdown" class="dropdown-content">
-          messages go here
+          {/* In the menu there should be a title: MESSAGES in all caps on the left
+              Send a new message    on the right
+              The username of the sender, the time it was sent and a preview of the content*/}
         </div>
       </div>
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">EARN IQ</button>
         <div id="myDropdown" class="dropdown-content">
-          unanswered questions go here
+          {/* Title: IQ OPPORTUNITIES
+              Should show missing [data type] or Unanswered question */}
         </div>
       </div>  
 
       <div class="dropdown">
         <button onclick="myFunction()" class="dropbtn">IQ</button>
         <div id="myDropdown" class="dropdown-content">
-          ACCOUNT
+          {/* ACCOUNT
               View Profile
               Report a Problem
               Sign Out
-              Firehose
+              Firehose */}
         </div>
       </div>  
     </hgroup>
