@@ -410,58 +410,58 @@ var Greeting = function Greeting(_ref) {
       "class": "fa-solid fa-thumbtack"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onclick: "myFunction()",
-      "class": "dropbtn"
+      className: "dropbtn"
     }, "FORUMS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
-      "class": "dropdown-content"
+      className: "dropdown-content"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      "class": "dropdown"
+      className: "dropdown"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fa-solid fa-bolt-lightning"
+      className: "fa-solid fa-bolt-lightning"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onclick: "myFunction()",
-      "class": "dropbtn"
+      className: "dropbtn"
     }, "FEED"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
-      "class": "dropdown-content"
+      className: "dropdown-content"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      "class": "dropdown"
+      clasNames: "dropdown"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fa-solid fa-bell"
+      className: "fa-solid fa-bell"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onclick: "myFunction()",
-      "class": "dropbtn"
+      className: "dropbtn"
     }, "ME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
-      "class": "dropdown-content"
+      className: "dropdown-content"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      "class": "dropdown"
+      className: "dropdown"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fa-solid fa-envelope"
+      className: "fa-solid fa-envelope"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onclick: "myFunction()",
-      "class": "dropbtn"
+      className: "dropbtn"
     }, "MESSAGES"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
-      "class": "dropdown-content"
+      className: "dropdown-content"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      "class": "dropdown"
+      className: "dropdown"
     }, "'", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fa-solid fa-lightbulb-on"
+      className: "fa-solid fa-lightbulb-on"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onclick: "myFunction()",
-      "class": "dropbtn"
+      className: "dropbtn"
     }, "EARN IQ"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
-      "class": "dropdown-content"
+      className: "dropdown-content"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      "class": "dropdown"
+      className: "dropdown"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onclick: "myFunction()",
-      "class": "dropbtn"
+      className: "dropbtn"
     }, "IQ"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
-      "class": "dropdown-content"
+      className: "dropdown-content"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
       href: "#"
     }, "ACCOUNT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
