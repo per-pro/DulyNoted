@@ -65,11 +65,11 @@ const Greeting = ({ currentUser, logout }) => {
         {/* user profile pic should appear here */}
         <button onclick="myFunction()" class="dropbtn">IQ</button>
         <div id="myDropdown" class="dropdown-content">
-          {/* ACCOUNT
-              View Profile
-              Report a Problem
-              Sign Out
-              Firehose */}
+          <a href="#">ACCOUNT</a>
+          <a href="#">View Profile</a>
+          <a href="#">Report a Problem</a>
+          <a href="#">Sign Out</a>
+          <a href="#">Firehose</a>
         </div>
       </div>  
     </hgroup>
