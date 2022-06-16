@@ -459,20 +459,25 @@ var Greeting = function Greeting(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
       onclick: "myFunction()",
       className: "dropbtn"
-    }, "IQ"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    }, "IQ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
       className: "dropdown-content"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "#"
+      href: "#",
+      className: "dropdown-content"
     }, "ACCOUNT"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "#"
+      href: "#",
+      className: "dropdown-content"
     }, "View Profile"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "#"
+      href: "#",
+      className: "dropdown-content"
     }, "Report a Problem"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "#"
+      href: "#",
+      className: "dropdown-content"
     }, "Sign Out"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-      href: "#"
-    }, "Firehose"))));
+      href: "#",
+      className: "dropdown-content"
+    }, "Firehose")))));
   };
 
   console.log(currentUser);

@@ -63,14 +63,15 @@ const Greeting = ({ currentUser, logout }) => {
 
       <div className="dropdown">
         {/* user profile pic should appear here */}
-        <button onclick="myFunction()" className="dropbtn">IQ</button>
-        <div id="myDropdown" className="dropdown-content">
-          <a href="#">ACCOUNT</a>
-          <a href="#">View Profile</a>
-          <a href="#">Report a Problem</a>
-          <a href="#">Sign Out</a>
-          <a href="#">Firehose</a>
-        </div>
+        <button onclick="myFunction()" className="dropbtn">IQ
+          <div id="myDropdown" className="dropdown-content">
+            <a href="#" className="dropdown-content">ACCOUNT</a>
+            <a href="#" className="dropdown-content">View Profile</a>
+            <a href="#" className="dropdown-content">Report a Problem</a>
+            <a href="#" className="dropdown-content">Sign Out</a>
+            <a href="#" className="dropdown-content">Firehose</a>
+          </div>
+        </button>
       </div>  
     </hgroup>
   );
