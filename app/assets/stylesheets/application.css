@@ -133,10 +133,6 @@ a {
     padding: 12px 16px;
     z-index: 1;
 }
-/* 
-.dropbtn:hover {
-    cursor: pointer;
-}    */
 
 .dropbtn:hover .dropdown-content {
     display: block;
