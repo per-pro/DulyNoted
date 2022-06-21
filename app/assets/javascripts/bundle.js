@@ -338,8 +338,10 @@ var App = function App() {
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (App); // Search bar?
-// Bar with featured?
+/* harmony default export */ __webpack_exports__["default"] = (App); // Features to add:
+// Annotation
+// Uploading new text
+// Search bar
 // On genius, log in is a modal
 
 /***/ }),

@@ -34,6 +34,8 @@ const App = () => (
 
 export default App;
 
-// Search bar?
-// Bar with featured?
+// Features to add:
+// Annotation
+// Uploading new text
+// Search bar
 // On genius, log in is a modal
