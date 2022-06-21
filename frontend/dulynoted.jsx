@@ -23,4 +23,3 @@ document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(<Root store={store}/>, root);
 });
 
-// render something when I login
