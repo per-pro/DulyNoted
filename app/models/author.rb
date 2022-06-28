@@ -3,7 +3,7 @@ class Author < ApplicationRecord
 
     validates :name, :birth_date, :description, :category, presence: true
     validates :category, inclusion: CATEGORIES
-    validates :death_date, if: -> {death_date}
+    validates :alive, inclusion: {in: [ true, false ]}
 
     has_many :texts,
         foreign_key: :author_id
