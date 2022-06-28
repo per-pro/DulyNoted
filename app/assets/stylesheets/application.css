@@ -112,7 +112,7 @@ a {
 .dropdown {
     position: relative;
     display: inline-block;
-    background-color: yellow;
+    cursor: pointer;
   }
 
   .dropdown-content a {
