@@ -64,6 +64,7 @@ a {
     text-align: center;
     text-shadow: 2px 2px 8px black;
     white-space: nowrap;
+    cursor: pointer; 
 }
 
 #title {
@@ -113,6 +114,11 @@ a {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
   }
 
   .dropdown-content a {
@@ -135,9 +141,9 @@ a {
     z-index: 1;
 }
 
-.dropbtn:hover .dropdown-content {
+.dropbtn.clicked .dropdown-content {
     display: block;
 }
 
-.dropdown-content a:hover {background-color: #f1f1f1}
+.dropdown-content a.clicked {background-color: #f1f1f1}
 
