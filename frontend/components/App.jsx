@@ -13,7 +13,7 @@ import Greeting from "./greeting/greeting_container";
 import Home from "./home/home"
 import Dashboard from "./dashboard/dashboard";
 import TextIndex from './text/text_show_container'
-import Feature from 
+import Feature from "./feature/feature_container"
 
 const App = () => (
   <div>
