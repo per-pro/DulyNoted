@@ -13,13 +13,16 @@ import Greeting from "./greeting/greeting_container";
 import Home from "./home/home"
 import Dashboard from "./dashboard/dashboard";
 import TextIndex from './text/text_show_container'
-
+import Feature from 
 
 const App = () => (
   <div>
     <header>
       <Greeting/>
     </header>
+    <h2>
+      <Feature/>
+    </h2>
     <main>
       <Switch>
         <AuthRoute exact path="/login" component={LoginFormContainer} />
