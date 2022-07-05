@@ -20,7 +20,7 @@ class Api::TextsController < ApplicationController
     end
 
     def show
-        @text = Text.includes(:texts).find_by(id: params[:id])
+        @text = Text.find_by(id: params[:id])
         render :show
     end
 

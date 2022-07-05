@@ -6,10 +6,10 @@ export const searchTexts = (query) => (
   })
 )
 
-export const receiveText = () => {
+export const receiveText = (textId) => {
     return $.ajax({
       method: 'GET',
-      url: '/api/texts',
+      url: '/api/:textId',
       error: (err) => console.log(err)
     })
   }

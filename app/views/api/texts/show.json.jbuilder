@@ -1,1 +1,1 @@
-json.extract!
+json.extract! @text, :id, :title, :source, :content
