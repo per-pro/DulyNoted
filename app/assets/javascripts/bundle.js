@@ -337,6 +337,10 @@ var App = function App() {
     exact: true,
     path: "/me",
     component: _dashboard_dashboard__WEBPACK_IMPORTED_MODULE_7__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_4__["ProtectedRoute"], {
+    exact: true,
+    path: "/:resource_id",
+    component: _text_text_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
@@ -375,6 +379,59 @@ var Dashboard = function Dashboard() {
 
 /***/ }),
 
+/***/ "./frontend/components/feature/feature.jsx":
+/*!*************************************************!*\
+  !*** ./frontend/components/feature/feature.jsx ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
+
+
+var Feature = function Feature() {
+  var featureGroup = function featureGroup() {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hgroup", {
+      className: "feature-group"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "button"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: "myFunction()"
+    }, "FEATURED")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "button"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: "myFunction()"
+    }, "CHARTS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "button"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: "myFunction()"
+    }, "VIDEOS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "button"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: "myFunction()"
+    }, "PROMOTE")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "button"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: "myFunction()"
+    }, "FORUMS")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "button"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      onClick: "myFunction()"
+    }, "ADD A TEXT")));
+  };
+
+  return featureGroup();
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Feature);
+
+/***/ }),
+
 /***/ "./frontend/components/feature/feature_container.js":
 /*!**********************************************************!*\
   !*** ./frontend/components/feature/feature_container.js ***!
@@ -385,7 +442,7 @@ var Dashboard = function Dashboard() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-!(function webpackMissingModule() { var e = new Error("Cannot find module './featureg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+/* harmony import */ var _feature__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./feature */ "./frontend/components/feature/feature.jsx");
 
 
 
@@ -416,7 +473,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(!(function webpackMissingModule() { var e = new Error("Cannot find module './featureg'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_feature__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -454,11 +511,11 @@ var Greeting = function Greeting(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
       id: "title"
     }, "D\xA0 U\xA0 L\xA0 Y \xA0\xA0\xA0 N\xA0 O\xA0 T\xA0 E\xA0 D"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      "class": "dropdown"
+      className: "dropdown"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-      "class": "fa-solid fa-thumbtack"
+      className: "fa-solid fa-thumbtack"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onclick: "myFunction()",
+      onClick: "myFunction()",
       className: "dropbtn"
     }, "FORUMS"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
@@ -468,17 +525,17 @@ var Greeting = function Greeting(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fa-solid fa-bolt-lightning"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onclick: "myFunction()",
+      onClick: "myFunction()",
       className: "dropbtn"
     }, "FEED"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
       className: "dropdown-content"
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-      clasNames: "dropdown"
+      className: "dropdown"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fa-solid fa-bell"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onclick: "myFunction()",
+      onClick: "myFunction()",
       className: "dropbtn"
     }, "ME"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
@@ -488,7 +545,7 @@ var Greeting = function Greeting(_ref) {
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fa-solid fa-envelope"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onclick: "myFunction()",
+      onClick: "myFunction()",
       className: "dropbtn"
     }, "MESSAGES"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
@@ -498,7 +555,7 @@ var Greeting = function Greeting(_ref) {
     }, "'", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
       className: "fa-solid fa-lightbulb-on"
     }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onclick: "myFunction()",
+      onClick: "myFunction()",
       className: "dropbtn"
     }, "EARN IQ"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
@@ -506,7 +563,7 @@ var Greeting = function Greeting(_ref) {
     })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       className: "dropdown"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onclick: "myFunction()",
+      onClick: "myFunction()",
       className: "dropbtn"
     }, "IQ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
       id: "myDropdown",
@@ -924,15 +981,17 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(TextIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.requestText(6);
+      debugger;
+      console.log("hello", this.props.requestText); // this.props.requestText(6)
     }
   }, {
     key: "render",
     value: function render() {
       var _this = this;
 
-      if (this.props.text === undefined) return null;
-      console.log(this.props);
+      console.log("test test", this.props); //change this back to null 
+
+      if (this.props.text === undefined) return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "loading");
       var trackTexts = Object.values(this.props.text).map(function (text) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           onClick: _this.props.logout

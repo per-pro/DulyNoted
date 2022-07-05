@@ -9,12 +9,15 @@ class TextIndex extends React.Component {
     } 
 
     componentDidMount() {
-        this.props.requestText(6)
+        debugger
+        console.log("hello", this.props.requestText)
+        // this.props.requestText(6)
     }
 
     render() {
-        if (this.props.text === undefined) return null 
-        console.log(this.props)
+        console.log("test test", this.props)
+        //change this back to null 
+        if (this.props.text === undefined) return <h1>loading</h1>
             let trackTexts = Object.values(this.props.text).map((text) => {
                 return (
                     <div>

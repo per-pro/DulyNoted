@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Feature from './featureg';
+import Feature from './feature';
 
 const mapStateToProps = ({ session, entities }) => {
   console.log(session, entities)
