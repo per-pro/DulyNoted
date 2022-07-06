@@ -21,7 +21,7 @@ const Greeting = ({ currentUser, logout }) => {
         <div id="myDropdown" className="dropdown-content">
           {/* Notifications should show up if there are any
               Otherwise it should say No Notifications */}
-        </div>onClick
+        </div>
       </div>
 
       <div className="dropdown">
