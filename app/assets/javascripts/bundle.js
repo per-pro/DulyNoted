@@ -958,7 +958,6 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       var _this = this;
 
-      //change this back to null 
       if (this.props.text === undefined) return null;
       var trackTexts = Object.values(this.props.text).map(function (text) {
         return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
