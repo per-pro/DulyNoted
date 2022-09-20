@@ -28,8 +28,8 @@ foucault = Author.create!({ name: "Michel Foucault", alive: false, birth_date: 1
 rose = Author.create!({ name: "Gillian Rose", alive: false, birth_date: 1947, category: "philosopher", created_at: 2022, updated_at: 2022, death_date: 1995, description: "Defended the concept of speculation against its critics" })
 firestone = Author.create!({ name: "Shulamith Firestone", alive: false, birth_date: 1945, category: "feminist", created_at: 2022, updated_at: 2022, death_date: 2012, description: "Went from Orthodox Judaism to radical materialist feminism" })
 chitty = Author.create!({ name: "Christopher Chitty", alive: false, birth_date: 1983, category: "genealogist", created_at: 2022, updated_at: 2022, death_date: 2015, description: "Synthesized Marxism and gay liberation" })
-metcalfe = Author.create!({ name: "Xandra Metcalfe", alive: true, birth_date: 1990, category: "musician", created_at: 2022, updated_at: 2022, death_date: 2300, description: "A psychoanalytic communist and noise artist based in Melbourne, Australia." })
 ducasse = Author.create!({ name: "Isidore Ducasse", alive: false, birth_date: 1846, category: "poet", created_at: 2022, updated_at: 2022, death_date: 1870, description: "Wrote a series of songs about evil and later turned towards setting out positive ethical maxims" })
+metcalfe = Author.create!({ name: "Xandra Metcalfe", alive: true, birth_date: 1990, category: "musician", created_at: 2022, updated_at: 2022, death_date: 2300, description: "A psychoanalytic communist and noise artist based in Melbourne, Australia." })
 
 # Texts
 
@@ -60,5 +60,5 @@ poesies = Text.create!({     title: "Poesies",
                             content: "...As long as my friends are still alive, I will not speak of death..... ",
                             author_id: ducasse.id})
 
-itai = User.create!({       username: "itaif",
+shulie = User.create!({       username: "shulief",
                             password: "oqwlefftwbpimfvwvc"})

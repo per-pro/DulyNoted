@@ -4,9 +4,9 @@ import * as APIUtil from '../util/text_api_util';
 export const RECEIVE_TEXTS = 'RECEIVE_TEXTS';
 export const RECEIVE_TEXT = 'RECEIVE_TEXT';
 
-export const receiveTexts = (text)=> ({
+export const receiveTexts = (texts)=> ({
     type: RECEIVE_TEXTS,
-    text
+    texts
   });
   
 export const receiveText = (text) => ({
@@ -18,6 +18,12 @@ export const requestTexts = (query) => (dispatch) => (
       APIUtil.searchTexts(query)
           .then(payload => dispatch(receiveTexts(payload)))
 )
+
+export const requestAllTexts = () => (dispatch) => (
+  APIUtil.receiveAllTexts()
+    .then(payload => dispatch(receiveTexts(payload)))
+)
+
 
 export const requestText = (textId) => (dispatch) => (
     APIUtil.receiveText(textId)

@@ -245,7 +245,7 @@ var logout = function logout() {
 /*!******************************************!*\
   !*** ./frontend/actions/text_actions.js ***!
   \******************************************/
-/*! exports provided: RECEIVE_TEXTS, RECEIVE_TEXT, receiveTexts, receiveText, requestTexts, requestText */
+/*! exports provided: RECEIVE_TEXTS, RECEIVE_TEXT, receiveTexts, receiveText, requestTexts, requestAllTexts, requestText */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -255,15 +255,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveTexts", function() { return receiveTexts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveText", function() { return receiveText; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestTexts", function() { return requestTexts; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestAllTexts", function() { return requestAllTexts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "requestText", function() { return requestText; });
 /* harmony import */ var _util_text_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/text_api_util */ "./frontend/util/text_api_util.js");
 
 var RECEIVE_TEXTS = 'RECEIVE_TEXTS';
 var RECEIVE_TEXT = 'RECEIVE_TEXT';
-var receiveTexts = function receiveTexts(text) {
+var receiveTexts = function receiveTexts(texts) {
   return {
     type: RECEIVE_TEXTS,
-    text: text
+    texts: texts
   };
 };
 var receiveText = function receiveText(text) {
@@ -275,6 +276,13 @@ var receiveText = function receiveText(text) {
 var requestTexts = function requestTexts(query) {
   return function (dispatch) {
     return _util_text_api_util__WEBPACK_IMPORTED_MODULE_0__["searchTexts"](query).then(function (payload) {
+      return dispatch(receiveTexts(payload));
+    });
+  };
+};
+var requestAllTexts = function requestAllTexts() {
+  return function (dispatch) {
+    return _util_text_api_util__WEBPACK_IMPORTED_MODULE_0__["receiveAllTexts"]().then(function (payload) {
       return dispatch(receiveTexts(payload));
     });
   };
@@ -307,7 +315,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _greeting_greeting_container__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./greeting/greeting_container */ "./frontend/components/greeting/greeting_container.js");
 /* harmony import */ var _home_home__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./home/home */ "./frontend/components/home/home.jsx");
 /* harmony import */ var _dashboard_dashboard__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dashboard/dashboard */ "./frontend/components/dashboard/dashboard.jsx");
-/* harmony import */ var _text_text_show_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./text/text_show_container */ "./frontend/components/text/text_show_container.js");
+/* harmony import */ var _text_text_index_container__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./text/text_index_container */ "./frontend/components/text/text_index_container.jsx");
 /* harmony import */ var _feature_feature_container__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./feature/feature_container */ "./frontend/components/feature/feature_container.js");
 
 
@@ -339,8 +347,8 @@ var App = function App() {
     component: _dashboard_dashboard__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
     exact: true,
-    path: "/:resource_id",
-    component: _text_text_show_container__WEBPACK_IMPORTED_MODULE_8__["default"]
+    path: "/texts",
+    component: _text_text_index_container__WEBPACK_IMPORTED_MODULE_8__["default"]
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null));
 };
 
@@ -348,6 +356,7 @@ var App = function App() {
 // Annotation
 // Uploading new text
 // Search bar
+// Fix Buttons and other styling
 // On genius, log in is a modal
 
 /***/ }),
@@ -951,31 +960,37 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
   _createClass(TextIndex, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-      this.props.requestText();
+      this.props.requestAllTexts();
     }
   }, {
     key: "render",
     value: function render() {
-      var _this = this;
-
-      if (this.props.text === undefined) return null;
-      var trackTexts = Object.values(this.props.text).map(function (text) {
-        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          onClick: _this.props.logout
-        }, "Log Out"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-          key: text.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-          to: '/texts' + text.id
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "author-text-item"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-          id: "author-text-info"
-        }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          id: "author-text-title"
-        }, text.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-          id: "author-text-source"
-        }, text.source))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, trackTexts));
-      });
+      if (this.props.texts === undefined) return null;
+      var texts = Object.values(this.props.texts);
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, texts.map(function (text) {
+        /*#__PURE__*/
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, text.title);
+      })); //     let trackTexts = Object.values(this.props.text).map((text) => {
+      //         return (
+      //             <div>
+      //                 <button onClick={this.props.logout}>Log Out</button>
+      //                 <li key={text.id}>
+      //                     <Link to={'/texts' + text.id}>
+      //                         <div id="author-text-item">
+      //                             {/* add in something here later for image url */}
+      //                             <div id="author-text-info">
+      //                                 <p id="author-text-title">{text.title}</p>
+      //                                 <p id="author-text-source">{text.source}</p>
+      //                             </div>
+      //                         </div>
+      //                     </Link>
+      //                 </li>
+      //             <ol>
+      //                 {trackTexts}
+      //             </ol>
+      //             </div>
+      //         )
+      // })
     }
   }]);
 
@@ -986,50 +1001,38 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
 
 /***/ }),
 
-/***/ "./frontend/components/text/text_show_container.js":
-/*!*********************************************************!*\
-  !*** ./frontend/components/text/text_show_container.js ***!
-  \*********************************************************/
+/***/ "./frontend/components/text/text_index_container.jsx":
+/*!***********************************************************!*\
+  !*** ./frontend/components/text/text_index_container.jsx ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _text_index_jsx__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./text_index.jsx */ "./frontend/components/text/text_index.jsx");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _actions_session_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/session_actions */ "./frontend/actions/session_actions.js");
-/* harmony import */ var _actions_text_actions_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/text_actions.js */ "./frontend/actions/text_actions.js");
-
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _text_index__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./text_index */ "./frontend/components/text/text_index.jsx");
+/* harmony import */ var _actions_text_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/text_actions */ "./frontend/actions/text_actions.js");
 
 
 
 
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
-    text: state.entities.texts[ownProps.match.params.textId],
-    authors: state.entities.authors,
-    comments: Object.values(state.entities.comments).sort(function (a, b) {
-      if (a.startIndex < b.startIndex) {
-        return -1;
-      } else {
-        return 1;
-      }
-    })
+    // current user, keep track of texts
+    texts: state.entities.texts
   };
 };
 
-var mapDispatchToProps = function mapDispatchToProps(dispatch, ownProps) {
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
-    requestText: function requestText(textId) {
-      return dispatch(Object(_actions_text_actions_js__WEBPACK_IMPORTED_MODULE_3__["requestText"])(textId));
-    },
-    logout: function logout() {
-      return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["logout"])());
+    requestAllTexts: function requestAllTexts() {
+      return dispatch(Object(_actions_text_actions__WEBPACK_IMPORTED_MODULE_2__["requestAllTexts"])());
     }
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(_text_index_jsx__WEBPACK_IMPORTED_MODULE_0__["default"]));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_text_index__WEBPACK_IMPORTED_MODULE_1__["default"]));
 
 /***/ }),
 
@@ -1517,26 +1520,33 @@ var logout = function logout() {
 /*!****************************************!*\
   !*** ./frontend/util/text_api_util.js ***!
   \****************************************/
-/*! exports provided: searchTexts, receiveText */
+/*! exports provided: receiveText, receiveAllTexts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "searchTexts", function() { return searchTexts; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveText", function() { return receiveText; });
-var searchTexts = function searchTexts(query) {
-  return $.ajax({
-    url: '/api/texts',
-    method: 'GET',
-    data: {
-      query: query
-    }
-  });
-};
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveAllTexts", function() { return receiveAllTexts; });
+// export const searchTexts = (query) => (
+//   $.ajax({
+//       url: '/api/texts',
+//       method: 'GET',
+//       data: { query }
+//   })
+// )
 var receiveText = function receiveText(textId) {
   return $.ajax({
     method: 'GET',
-    url: '/api/:textId',
+    url: "/api/texts/".concat(textId),
+    error: function error(err) {
+      return console.log(err);
+    }
+  });
+};
+var receiveAllTexts = function receiveAllTexts() {
+  return $.ajax({
+    method: 'GET',
+    url: '/api/texts',
     error: function error(err) {
       return console.log(err);
     }
