@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Home from "../home/home";
 
 const Dashboard = () => {
 
     return (
         <div className="dash-container">
             <main>
-                <Home></Home>
+                <p>
+                    Hello, I am text you can only see if you have logged in.
+                </p>
             </main>
         </div>
     )

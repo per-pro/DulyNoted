@@ -20,7 +20,9 @@ class TextIndex extends React.Component {
               {
               texts.map(text => {
                     <div>
-                        {text.title}
+                        <ol>
+                            {text.title}
+                        </ol>
                     </div> 
                 })
             }
