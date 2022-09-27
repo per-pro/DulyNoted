@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// does requestAllTexts need to be imported to make this work?
 
 class TextIndex extends React.Component {
 
