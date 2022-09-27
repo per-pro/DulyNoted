@@ -373,13 +373,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var _text_text_index__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../text/text_index */ "./frontend/components/text/text_index.jsx");
+
 
 
 
 var Dashboard = function Dashboard() {
+  // what needs to go in this container? 
+  // 0. index of texts already in the DB
+  // 1. button for uploading new text
+  // 2. index of my texts
+  // 3. upodate existing texts
+  // 4. delete texts
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "dash-container"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Hello, I am text you can only see if you have logged in.")));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Hello, I am text you can only see if you have logged in."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_text_text_index__WEBPACK_IMPORTED_MODULE_2__["default"], null)));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Dashboard);
@@ -953,7 +961,8 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, TextIndex);
 
     return _super.call(this, props);
-  }
+  } //there's a bug here, react doesn't think RAT is a function
+
 
   _createClass(TextIndex, [{
     key: "componentDidMount",
@@ -967,7 +976,7 @@ var TextIndex = /*#__PURE__*/function (_React$Component) {
       var texts = Object.values(this.props.texts);
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, texts.map(function (text) {
         /*#__PURE__*/
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ol", null, text.title));
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, text.title);
       })); //     let trackTexts = Object.values(this.props.text).map((text) => {
       //         return (
       //             <div>

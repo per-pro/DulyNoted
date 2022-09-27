@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-
 class TextIndex extends React.Component {
 
     constructor (props) {
         super(props);
     } 
 
+    //there's a bug here, react doesn't think RAT is a function
     componentDidMount() {
         this.props.requestAllTexts()
     }
@@ -20,9 +20,7 @@ class TextIndex extends React.Component {
               {
               texts.map(text => {
                     <div>
-                        <ol>
-                            {text.title}
-                        </ol>
+                        {text.title}
                     </div> 
                 })
             }
