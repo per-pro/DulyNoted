@@ -4,11 +4,10 @@ import TextIndex from "../text/text_index";
 
 const Dashboard = () => {
 
-    // what needs to go in this container? 
-    // 0. index of texts already in the DB
+    // what needs to go in this container?
     // 1. button for uploading new text
     // 2. index of my texts
-    // 3. upodate existing texts
+    // 3. update existing texts
     // 4. delete texts
 
 
